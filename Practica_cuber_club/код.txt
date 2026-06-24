@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кибертека - Официальный сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Зона активации меню -->
+    <div class="menu-trigger"></div>
+
+    <!-- Вертикальное выплывающее меню -->
+    <nav class="side-menu">
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#zones">Зоны</a></li>
+            <li><a href="#photo">Фото</a></li>
+            <li><a href="#prices">Цены</a></li>
+            <li><a href="#promo">Акции</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. ХЕДЕР -->
+    <header id="home" class="main-header">
+        <div class="container">
+            <div class="logo-group">
+                <img src="media/голова.png" alt="Логотип" class="logo-img">
+                <div class="logo-text">
+                    <h1>КИБЕРТЕКА</h1>
+                    <p>НА ПРОФСОЮЗНОЙ</p>
+                </div>
+            </div>
+            <ul class="header-info">
+                <li>Профсоюзная улица 22/10к1</li>
+                <li>Работаем круглосуточно!</li>
+                <li>8 977 320 88 88</li>
+            </ul>
+            <a href="#booking" class="btn-booking">Забронировать!</a>
+        </div>
+    </header>
+
+    <!-- 2. СЕКЦИЯ ЗОНЫ -->
+    <section id="zones" class="zones-section">
+        <div class="zones-wrapper">
+            <h2 class="zones-title">РАЗНЫЕ ЗОНЫ С РАЗНЫМИ УСЛОВИЯМИ</h2>
+            
+            <div class="zones-container">
+                <div class="zone-card">
+                    <p class="zone-top-text">Игровой ПК и периферия</p>
+                    <h3>СТАНДАРТ</h3>
+                    <div class="zone-img-box pink-border">
+                        <img src="media/зона1.png" alt="Зона Стандарт">
+                    </div>
+                    <p class="zone-desc">Общая Зона</p>
+                    <a href="#" class="zone-link pink-text">Подробнее →</a>
+                </div>
+
+                <div class="zone-card">
+                    <p class="zone-top-text">Монитор больше + ПК мощнее</p>
+                    <h3>СТАНДАРТ+</h3>
+                    <div class="zone-img-box cyan-border">
+                        <img src="media/зона2.png" alt="Зона Стандарт Плюс">
+                    </div>
+                    <p class="zone-desc">Лучшие Места</p>
+                    <a href="#" class="zone-link cyan-text">Подробнее →</a>
+                </div>
+
+                <div class="zone-card">
+                    <p class="zone-top-text">Подписка PS+ и 2 геймпада</p>
+                    <h3>ПРИСТАВКА</h3>
+                    <div class="zone-img-box blue-border">
+                        <img src="media/зона3.png" alt="Зона Приставка">
+                    </div>
+                    <p class="zone-desc">Диван + PS5</p>
+                    <a href="#" class="zone-link blue-text">Подробнее →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ГАЛЕРЕЯ -->
+    <section id="photo" class="gallery-section">
+        <h2 class="section-heading">НАША ГАЛЕРЕЯ</h2>
+        <div class="gallery-container">
+            <input type="radio" name="rooms" id="room1" checked>
+            <input type="radio" name="rooms" id="room2">
+            <input type="radio" name="rooms" id="room3">
+
+            <div class="carousel-viewport">
+                <div class="arrows-container">
+                    <label for="room3" class="arrow left-arrow" id="arrow-left-1">←</label>
+                    <label for="room1" class="arrow left-arrow" id="arrow-left-2">←</label>
+                    <label for="room2" class="arrow left-arrow" id="arrow-left-3">←</label>
+                    <label for="room2" class="arrow right-arrow" id="arrow-right-1">→</label>
+                    <label for="room3" class="arrow right-arrow" id="arrow-right-2">→</label>
+                    <label for="room1" class="arrow right-arrow" id="arrow-right-3">→</label>
+                </div>
+                
+                <div class="carousel-slides">
+                    <div class="slide s1"><img src="media/комната1.png" alt="Комната 1"></div>
+                    <div class="slide s2"><img src="media/комната2.png" alt="Комната 2"></div>
+                    <div class="slide s3"><img src="media/комната3.png" alt="Комната 3"></div>
+                </div>
+            </div>
+
+            <div class="pagination-dots">
+                <label for="room1" class="dot d1"></label>
+                <label for="room2" class="dot d2"></label>
+                <label for="room3" class="dot d3"></label>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ БРОНИРОВАНИЯ -->
+    <section id="booking" class="booking-section">
+        <div class="booking-card animate-fade-in">
+            <svg class="booking-arrow" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="path-line" d="M180 20 H400 C430 20 430 40 430 70 V150 M430 220 V250 C430 280 400 280 370 280 H150" 
+                      stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+                <path d="M425 145 L430 152 L435 145" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+                <path d="M155 275 L148 280 L155 285" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+            </svg>
+
+            <div class="booking-content">
+                <h2 class="booking-title">Забронируй место!</h2>
+                
+                <form class="booking-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Имя" class="input-field name-input" required>
+                        <input type="date" class="input-field date-input" required>
+                        <input type="time" class="input-field time-input" required>
+                    </div>
+
+                    <div class="form-row select-wrapper">
+                        <label>Количество гостей</label>
+                        <select class="input-field guest-select">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+
+                    <input type="tel" id="phone" class="input-field full-input" placeholder="+375 (__) ___-__-__">
+                    <textarea placeholder="Ваши пожелания" class="input-field textarea-field"></textarea>
+
+                    <button type="submit" class="btn-submit">Забронировать!</button>
+                </form>
+            </div>
+
+            <div class="form-image floating">
+                <img src="media/форма.png" alt="Экипировка">
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ АКЦИЙ -->
+    <section id="promo" class="promo-section">
+        <div class="promo-container">
+            <h2 class="promo-title">АКЦИИ И СКИДКИ НА ЛЮБОЙ ВКУС</h2>
+            
+            <div class="promo-grid">
+                <div class="promo-card card-wide">
+                    <div class="promo-content">
+                        <p>ПРОМОКОД CYBER</p>
+                        <a href="#" class="promo-link">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card card-tall">
+                    <div class="promo-content">
+                        <p>СКИДКИ ПН-СРЕДА</p>
+                        <a href="#booking" class="promo-link">Забронировать →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card">
+                    <div class="promo-content">
+                        <p>СНЕКИ И НАПИТКИ</p>
+                        <a href="#" class="promo-link">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card card-medium">
+                    <div class="promo-content">
+                        <p>КИБЕРФИКАЦИЯ CS</p>
+                        <a href="#" class="promo-link">Хочу участвовать →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card">
+                    <div class="promo-content">
+                        <p>ДР</p>
+                        <a href="#booking" class="promo-link">Забронировать →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card card-medium">
+                    <div class="promo-content">
+                        <p>КИБЕРФИКАЦИЯ DOTA</p>
+                        <a href="#" class="promo-link">Хочу участвовать →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card card-tall">
+                    <div class="promo-content">
+                        <p>ГРУППА ВК</p>
+                        <a href="#" class="promo-link">Перейти в группу →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ КОНТАКТЫ -->
+    <footer id="contacts" class="footer-section">
+        <div class="footer-container">
+            <div class="contact-card">
+                <h2 class="contact-title">Как нас найти?</h2>
+                
+                <div class="metro-info">
+                    <p><span class="dot orange"></span> Метро Профсоюзная — 4 минуты пешком</p>
+                    <p><span class="dot orange"></span> Метро Академическая — 5 минут пешком</p>
+                </div>
+
+                <div class="address-info">
+                    <p><strong>Адрес:</strong> Профсоюзная улица 22/10 к1</p>
+                    <p class="phone-row">
+                        <strong>Телефон:</strong> +7 977 320 88 88
+                        <a href="https://t.me/username"><img src="media/Telegram.svg" alt="TG" class="social-icon-small"></a>
+                        <a href="https://wa.me/79773208888"><img src="media/Whatsapp.svg" alt="WA" class="social-icon-small"></a>
+                    </p>
+                </div>
+
+                <div class="collab-info">
+                    <p><strong>По вопросам сотрудничества</strong></p>
+                    <p>Коммерческие предложения можно направить в группу ВК или в Телеграм</p>
+                </div>
+
+                <div class="footer-bottom">
+                    <a href="#booking" class="btn-booking-small">Забронировать!</a>
+                    <a href="#"><img src="media/Vk.svg" alt="VK" class="vk-logo-big"></a>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=37.641604%2C55.750523&z=16" 
+                            style="width: 100%; height: 100%; border: 0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- IMask Library -->
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput && typeof IMask !== 'undefined') {
+                IMask(phoneInput, {
+                    mask: '+375 (00) 000-00-00',
+                    lazy: false
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+/* Обнуление отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* --- ВЕРТИКАЛЬНОЕ МЕНЮ --- */
+.side-menu {
+    position: fixed;
+    left: -100px; 
+    top: 0;
+    height: 100vh;
+    width: 80px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s ease-in-out;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-trigger {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 100vh;
+    z-index: 1001;
+}
+
+.menu-trigger:hover + .side-menu, .side-menu:hover {
+    left: 0;
+}
+
+.side-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.side-menu ul li a {
+    color: #888;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+.side-menu ul li a:hover { 
+    color: #fff; 
+    text-shadow: 0 0 10px #fff; 
+}
+
+/* --- ХЕДЕР --- */
+.main-header {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 15%;
+    background-image: 
+        linear-gradient(135deg, rgba(138,43,226,0.3) 0%, rgba(0,0,0,0.6) 100%),
+        url('media/градиентный_слой1.png'), 
+        url('media/градиентный_слой2.png'), 
+        url('media/задний_фон.png');
+    background-blend-mode: multiply, soft-light, screen, normal;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container { 
+    max-width: 800px; 
+    width: 100%;
+}
+
+.logo-group { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 30px; 
+}
+
+.logo-img { 
+    width: 100px; 
+    height: auto; 
+    margin-right: 25px; 
+}
+
+.logo-text h1 { 
+    font-size: 60px; 
+    line-height: 1; 
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #fff, #b018cf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.logo-text p { 
+    font-size: 20px; 
+    letter-spacing: 3px; 
+}
+
+.header-info { 
+    list-style: none; 
+    margin-bottom: 45px; 
+}
+
+.header-info li { 
+    font-size: 20px; 
+    margin-bottom: 12px; 
+    position: relative; 
+    padding-left: 25px; 
+}
+
+.header-info li::before { 
+    content: "•"; 
+    position: absolute; 
+    left: 0; 
+}
+
+.btn-booking {
+    display: inline-block;
+    padding: 14px 45px;
+    background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+    color: #8a2be2;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(138, 43, 226, 0.3);
+}
+
+.btn-booking:hover { 
+    background: linear-gradient(135deg, #b018cf 0%, #8a2be2 100%);
+    color: #fff;
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px rgba(176, 24, 207, 0.6);
+}
+
+/* --- СЕКЦИЯ ЗОНЫ --- */
+.zones-section {
+    position: relative;
+    min-height: 100vh;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('media/трещины.png'), url('media/задний_фон_зоны.png');
+    background-size: cover, cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.zones-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+    padding: 60px 40px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+
+.zones-title { 
+    font-size: 28px; 
+    letter-spacing: 2px; 
+    margin-bottom: 50px; 
+    text-transform: uppercase; 
+}
+
+.zones-container { 
+    display: flex; 
+    justify-content: space-between; 
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.zone-card {
+    background: #111;
+    border-radius: 20px;
+    padding: 30px 20px;
+    flex: 1;
+    min-width: 280px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    opacity: 1;
+    animation: slideInUp 0.6s ease-out forwards;
+}
+
+.zone-card:nth-child(1) { animation-delay: 0.1s; }
+.zone-card:nth-child(2) { animation-delay: 0.2s; }
+.zone-card:nth-child(3) { animation-delay: 0.3s; }
+
+.zone-card:hover { 
+    transform: translateY(-10px) scale(1.02) rotateX(2deg); 
+    background: #161616; 
+    box-shadow: 0 15px 40px rgba(176, 24, 207, 0.4);
+}
+
+.zone-top-text { 
+    font-size: 12px; 
+    color: #666; 
+    margin-bottom: 5px; 
+}
+
+.zone-card h3 { 
+    font-size: 26px; 
+    font-weight: 900; 
+    margin-bottom: 20px; 
+    font-style: italic; 
+}
+
+.zone-img-box { 
+    width: 100%; 
+    margin-bottom: 20px; 
+    padding: 5px; 
+    border-radius: 10px; 
+    position: relative;
+}
+
+.zone-img-box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 12px;
+    padding: 2px;
+    background: linear-gradient(45deg, #e91e63, #00bcd4, #2196f3, #e91e63);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.zone-card:hover .zone-img-box::before {
+    opacity: 1;
+}
+
+.zone-img-box img { 
+    width: 100%; 
+    display: block; 
+    border-radius: 5px; 
+    filter: brightness(0.9) contrast(1.1);
+    transition: filter 0.3s ease;
+}
+
+.zone-card:hover .zone-img-box img {
+    filter: brightness(1) contrast(1.2);
+}
+
+.pink-border { border: 2px solid #e91e63; box-shadow: 0 0 15px rgba(233, 30, 99, 0.3); }
+.cyan-border { border: 2px solid #00bcd4; box-shadow: 0 0 15px rgba(0, 188, 212, 0.3); }
+.blue-border { border: 2px solid #2196f3; box-shadow: 0 0 15px rgba(33, 150, 243, 0.3); }
+
+.zone-desc { font-size: 18px; margin-bottom: 5px; }
+
+.zone-link { 
+    text-decoration: none; 
+    font-size: 12px; 
+    font-weight: bold; 
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.zone-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.zone-link:hover::after { width: 100%; }
+
+.pink-text { color: #e91e63; }
+.cyan-text { color: #00bcd4; }
+.blue-text { color: #2196f3; }
+
+/* --- СЕКЦИЯ ГАЛЕРЕЯ --- */
+.section-heading {
+    position: absolute;
+    top: -100px;
+    left: -9999px;
+}
+
+.gallery-section {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('media/круг.png'), url('media/задний_фон_зоны.png');
+    background-size: contain, cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.gallery-container input { display: none; }
+
+.carousel-viewport {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    position: absolute;
+    width: 700px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.5);
+    z-index: 0;
+    filter: brightness(0.3);
+}
+
+.slide img { 
+    width: 100%; 
+    display: block; 
+    filter: grayscale(20%);
+    transition: filter 0.3s ease;
+}
+
+.slide.active img { filter: grayscale(0%); }
+
+#room1:checked ~ .carousel-viewport .s1,
+#room2:checked ~ .carousel-viewport .s2,
+#room3:checked ~ .carousel-viewport .s3 {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 5;
+    filter: brightness(1);
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+#room1:checked ~ .carousel-viewport .s3,
+#room2:checked ~ .carousel-viewport .s1,
+#room3:checked ~ .carousel-viewport .s2 {
+    opacity: 0.4;
+    transform: translateX(-450px) scale(0.7);
+    z-index: 1;
+}
+
+#room1:checked ~ .carousel-viewport .s2,
+#room2:checked ~ .carousel-viewport .s3,
+#room3:checked ~ .carousel-viewport .s1 {
+    opacity: 0.4;
+    transform: translateX(450px) scale(0.7);
+    z-index: 1;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 45px;
+    color: white;
+    cursor: pointer;
+    z-index: 100;
+    display: none; 
+    font-weight: 100;
+    transition: all 0.3s ease;
+    user-select: none;
+    transform-style: preserve-3d;
+}
+
+.left-arrow { left: calc(50% - 350px - 80px); }
+.right-arrow { right: calc(50% - 350px - 80px); }
+
+.arrow:hover {
+    color: #fff;
+    transform: translateY(-50%) scale(1.2) rotateY(15deg);
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#room1:checked ~ .carousel-viewport #arrow-left-1, 
+#room1:checked ~ .carousel-viewport #arrow-right-1,
+#room2:checked ~ .carousel-viewport #arrow-left-2, 
+#room2:checked ~ .carousel-viewport #arrow-right-2,
+#room3:checked ~ .carousel-viewport #arrow-left-3, 
+#room3:checked ~ .carousel-viewport #arrow-right-3 {
+    display: block;
+}
+
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot:hover {
+    transform: scale(1.3);
+    background: rgba(255,255,255,0.5);
+}
+
+#room1:checked ~ .pagination-dots .d1,
+#room2:checked ~ .pagination-dots .d2,
+#room3:checked ~ .pagination-dots .d3 {
+    background: white;
+    box-shadow: 0 0 10px white;
+}
+
+/* --- СЕКЦИЯ БРОНИРОВАНИЯ --- */
+.booking-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('media/трещины.png'), url('media/задний_фон_зоны.png');
+    background-size: cover;
+}
+
+.booking-card {
+    background: #0a0a0a;
+    border: 1px solid #1a1a1a;
+    border-radius: 30px;
+    padding: 60px;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    position: relative;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+.booking-arrow {
+    position: absolute;
+    top: 30px;
+    left: 120px;
+    width: 720px;
+    height: 500px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.booking-content { flex: 1; z-index: 2; position: relative; }
+
+.booking-title { 
+    font-size: 30px; 
+    margin-bottom: 35px; 
+    width: fit-content;
+    background: linear-gradient(90deg, #fff, #e91e63);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.select-wrapper {
+    display: flex;
+    align-items: center;
+    background: #000;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    padding-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.select-wrapper:hover {
+    border-color: #b018cf;
+    box-shadow: 0 0 15px rgba(176, 24, 207, 0.3);
+}
+
+.select-wrapper label { padding-left: 20px; color: #666; font-size: 14px; flex: 1; }
+
+.guest-select { 
+    background: transparent; 
+    border: none; 
+    width: 60px; 
+    color: #fff;
+    cursor: pointer;
+    appearance: none;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.guest-select:hover { color: #b018cf; }
+.guest-select:focus { outline: none; }
+
+.booking-form { display: flex; flex-direction: column; gap: 15px; max-width: 420px; }
+
+.input-field {
+    background: #000;
+    border: 1px solid #1a1a1a;
+    border-radius: 10px;
+    padding: 15px 20px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.input-field::placeholder { color: #666; }
+
+.input-field:focus {
+    border-color: #b018cf;
+    box-shadow: 0 0 15px rgba(176, 24, 207, 0.3);
+    background: #050505;
+}
+
+.input-field:hover { border-color: #333; }
+
+.btn-submit {
+    background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+    color: #b018cf;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: fit-content;
+    cursor: pointer;
+    border: none;
+    z-index: 5;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(176, 24, 207, 0.3);
+}
+
+.btn-submit:hover {
+    background: linear-gradient(135deg, #b018cf 0%, #8a2be2 100%);
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(176, 24, 207, 0.4);
+    transform: scale(1.05);
+}
+
+.form-image {
+    position: absolute;
+    right: 25px;
+    top: 52%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.form-image img { 
+    width: 300px; 
+    filter: drop-shadow(0 0 20px #000);
+    transition: filter 0.3s ease;
+}
+
+.form-image:hover img {
+    filter: drop-shadow(0 0 30px rgba(176, 24, 207, 0.5));
+}
+
+/* --- АНИМАЦИИ --- */
+.animate-fade-in { animation: fadeIn 1.2s ease-out forwards; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.floating { animation: float 4s ease-in-out infinite; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-55%) translateX(-10px); }
+}
+
+.path-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawLine 2s ease-out 0.5s forwards;
+}
+
+@keyframes drawLine { to { stroke-dashoffset: 0; } }
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 8px #ff4500; }
+    50% { transform: scale(1.2); box-shadow: 0 0 15px #ff6347; }
+    100% { transform: scale(1); box-shadow: 0 0 8px #ff4500; }
+}
+
+/* --- СЕКЦИЯ АКЦИЙ --- */
+.promo-section {
+    min-height: 100vh;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('media/круг.png'), url('media/задний_фон_зоны.png');
+    background-size: contain, cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.promo-container { width: 100%; max-width: 1200px; text-align: center; }
+
+.promo-title {
+    font-size: 38px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 150px;
+    gap: 20px;
+}
+
+.promo-card {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid #1a1a1a;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    position: relative;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(176, 24, 207, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.promo-card:hover::before { left: 100%; }
+
+.promo-card:hover {
+    background: #111;
+    border-color: #b018cf;
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(176, 24, 207, 0.3);
+}
+
+.promo-content { text-align: center; }
+.promo-content p { font-size: 18px; font-weight: bold; text-transform: uppercase; margin-bottom: 15px; }
+
+.promo-link {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.promo-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #b018cf;
+    transition: width 0.3s ease;
+}
+
+.promo-link:hover { color: #fff; }
+.promo-link:hover::after { width: 100%; }
+
+.card-wide { grid-column: span 1; grid-row: span 1.5; }
+.card-tall { grid-row: span 2.5; }
+.card-medium { grid-row: span 1.5; }
+
+.promo-grid > div:nth-child(1) { grid-row: span 1.5; }
+.promo-grid > div:nth-child(2) { grid-row: span 2.5; }
+.promo-grid > div:nth-child(3) { grid-row: span 1.2; }
+.promo-grid > div:nth-child(7) { grid-column: 2 / 3; }
+
+/* --- СЕКЦИЯ КОНТАКТЫ --- */
+.footer-section {
+    min-height: 80vh;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('media/трещины.png'), url('media/задний_фон_зоны.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    max-width: 1100px;
+    align-items: stretch;
+}
+
+.contact-card {
+    flex: 1;
+    background: #0a0a0a;
+    border-radius: 25px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(176, 24, 207, 0.2);
+}
+
+.contact-title { font-size: 32px; font-weight: 800; }
+
+.metro-info p, .address-info p, .collab-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.orange { 
+    background: #ff4500; 
+    animation: pulse 2s infinite ease-in-out;
+}
+
+.phone-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-icon-small {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    filter: brightness(1);
+}
+
+.social-icon-small:hover { 
+    transform: scale(1.2) rotate(5deg); 
+    filter: brightness(1.5) drop-shadow(0 0 10px rgba(255,255,255,0.5));
+}
+
+.collab-info {
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(90deg, transparent, #b018cf, transparent) 1;
+    padding-top: 20px;
+    max-width: 300px;
+}
+
+.footer-bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn-booking-small {
+    background: linear-gradient(135deg, #fff 0%, #e0e0e0 100%);
+    color: #b018cf;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(176, 24, 207, 0.3);
+}
+
+.btn-booking-small:hover { 
+    background: linear-gradient(135deg, #b018cf 0%, #8a2be2 100%);
+    color: #fff;
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px rgba(176, 24, 207, 0.6);
+}
+
+.vk-logo-big {
+    width: 35px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    filter: grayscale(50%);
+}
+
+.vk-logo-big:hover { 
+    opacity: 1; 
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.map-container {
+    flex: 1.2; 
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid #1a1a1a;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.map-container:hover {
+    transform: translateY(-5px);
+    border-color: #b018cf;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+}
+
+.map-placeholder { width: 100%; height: 100%; background: #111; }
+
+/* ========================================
+   АДАПТИВНЫЕ СТИЛИ
+   ======================================== */
+
+/* Планшет (до 1024px) */
+@media (max-width: 1024px) {
+    .main-header { padding-left: 10%; height: auto; min-height: 100vh; padding: 80px 5% 40px; }
+    .logo-text h1 { font-size: 45px; }
+    .logo-text p { font-size: 16px; }
+    .header-info li { font-size: 16px; }
+    .btn-booking { padding: 12px 35px; font-size: 14px; }
+    .zones-wrapper { padding: 40px 30px; }
+    .zones-title { font-size: 24px; }
+    .zone-card { min-width: 250px; padding: 25px 15px; }
+    .zone-card h3 { font-size: 22px; }
+    .carousel-viewport { height: 400px; }
+    .slide { width: 500px; }
+    #room1:checked ~ .carousel-viewport .s3,
+    #room2:checked ~ .carousel-viewport .s1,
+    #room3:checked ~ .carousel-viewport .s2 { transform: translateX(-320px) scale(0.7); }
+    #room1:checked ~ .carousel-viewport .s2,
+    #room2:checked ~ .carousel-viewport .s3,
+    #room3:checked ~ .carousel-viewport .s1 { transform: translateX(320px) scale(0.7); }
+    .left-arrow { left: calc(50% - 250px - 60px); }
+    .right-arrow { right: calc(50% - 250px - 60px); }
+    .booking-card { padding: 40px 30px; flex-direction: column; align-items: center; }
+    .booking-arrow { display: none; }
+    .form-image { position: relative; right: auto; top: auto; transform: none; margin-top: 30px; }
+    .form-image img { width: 200px; }
+    .promo-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 120px; }
+    .card-tall { grid-row: span 2; }
+    .card-medium { grid-row: span 1.5; }
+}
+
+/* Мобильные (до 768px) */
+@media (max-width: 768px) {
+    .side-menu { width: 60px; }
+    .side-menu ul li a { font-size: 12px; }
+    .main-header { padding: 60px 5% 30px; text-align: center; }
+    .logo-group { justify-content: center; margin-bottom: 20px; }
+    .logo-img { width: 70px; margin-right: 15px; }
+    .logo-text h1 { font-size: 32px; }
+    .logo-text p { font-size: 14px; letter-spacing: 2px; }
+    .header-info { margin-bottom: 30px; text-align: left; display: inline-block; }
+    .header-info li { font-size: 14px; margin-bottom: 8px; }
+    .btn-booking { display: block; margin: 0 auto; padding: 10px 30px; font-size: 13px; }
+    .zones-section { padding: 60px 5%; }
+    .zones-wrapper { padding: 30px 20px; border-radius: 25px; }
+    .zones-title { font-size: 20px; margin-bottom: 30px; }
+    .zones-container { flex-direction: column; align-items: center; }
+    .zone-card { width: 100%; max-width: 350px; min-width: auto; }
+    .gallery-section { min-height: 70vh; }
+    .carousel-viewport { height: 300px; }
+    .slide { width: 280px; }
+    #room1:checked ~ .carousel-viewport .s3,
+    #room2:checked ~ .carousel-viewport .s1,
+    #room3:checked ~ .carousel-viewport .s2 { transform: translateX(-200px) scale(0.7); }
+    #room1:checked ~ .carousel-viewport .s2,
+    #room2:checked ~ .carousel-viewport .s3,
+    #room3:checked ~ .carousel-viewport .s1 { transform: translateX(200px) scale(0.7); }
+    .left-arrow { left: calc(50% - 140px - 40px); font-size: 30px; }
+    .right-arrow { right: calc(50% - 140px - 40px); font-size: 30px; }
+    .pagination-dots { gap: 10px; }
+    .dot { width: 10px; height: 10px; }
+    .booking-section { padding: 40px 5%; }
+    .booking-card { padding: 30px 20px; border-radius: 20px; }
+    .booking-title { font-size: 24px; text-align: center; margin: 0 auto 25px; }
+    .booking-form { max-width: 100%; }
+    .form-row { flex-direction: column; gap: 10px; }
+    .input-field { width: 100%; padding: 12px 15px; font-size: 14px; }
+    .btn-submit { width: 100%; padding: 12px; }
+    .form-image img { width: 150px; }
+    .promo-section { padding: 60px 5%; }
+    .promo-title { font-size: 24px; margin-bottom: 40px; }
+    .promo-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+    .promo-card { min-height: 100px; padding: 20px 15px; }
+    .promo-content p { font-size: 14px; }
+    .promo-link { font-size: 12px; }
+    .card-wide, .card-tall, .card-medium { grid-column: auto; grid-row: auto; }
+    .promo-grid > div:nth-child(7) { grid-column: auto; }
+    .footer-section { padding: 60px 5%; }
+    .footer-container { flex-direction: column; gap: 20px; }
+    .contact-card { padding: 30px 20px; border-radius: 20px; }
+    .contact-title { font-size: 24px; }
+    .metro-info p, .address-info p, .collab-info p { font-size: 13px; }
+    .footer-bottom { flex-direction: column; align-items: center; text-align: center; }
+    .map-container { height: 250px; border-radius: 20px; }
+}
+
+/* Очень маленькие экраны (до 480px) */
+@media (max-width: 480px) {
+    .side-menu { width: 50px; }
+    .side-menu ul { gap: 25px; }
+    .side-menu ul li a { font-size: 10px; }
+    .logo-img { width: 50px; }
+    .logo-text h1 { font-size: 24px; }
+    .logo-text p { font-size: 12px; }
+    .header-info li { font-size: 12px; }
+    .btn-booking, .btn-booking-small { padding: 8px 20px; font-size: 12px; }
+    .zones-title { font-size: 18px; }
+    .zone-card h3 { font-size: 18px; }
+    .zone-desc { font-size: 14px; }
+    .carousel-viewport { height: 250px; }
+    .slide { width: 240px; }
+    .left-arrow, .right-arrow { font-size: 24px; }
+    .booking-title { font-size: 20px; }
+    .input-field { padding: 10px 12px; font-size: 13px; }
+    .btn-submit { padding: 10px; font-size: 14px; }
+    .promo-title { font-size: 20px; }
+    .promo-content p { font-size: 13px; }
+    .contact-title { font-size: 20px; }
+}
+
+/* Декоративные элементы */
+.zones-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 42px;
+    background: linear-gradient(45deg, #e91e63, #00bcd4, #2196f3, #e91e63);
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(10px);
+}
+
+.dot.orange { box-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500; }

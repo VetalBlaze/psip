@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кибертека - Официальный сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Зона активации меню -->
+    <div class="menu-trigger"></div>
+
+    <!-- Вертикальное выплывающее меню -->
+    <nav class="side-menu">
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#zones">Зоны</a></li>
+            <li><a href="#photo">Фото</a></li>
+            <li><a href="#prices">Цены</a></li>
+            <li><a href="#promo">Акции</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. ХЕДЕР -->
+    <header id="home" class="main-header">
+        <div class="container">
+            <div class="logo-group">
+                <!-- Способ внедрения 2 (вызов функции из внутреннего скрипта при клике на логотип) -->
+                <img src="media/голова.png" alt="Логотип" class="logo-img" onclick="welcomeEasterEgg()" style="cursor: pointer;">
+                <div class="logo-text">
+                    <h1>КИБЕРТЕКА</h1>
+                    <p>НА ПРОФСОЮЗНОЙ</p>
+                </div>
+            </div>
+            <ul class="header-info">
+                <li>Профсоюзная улица 22/10к1</li>
+                <!-- Способ внедрения 1: Инлайновый JS в атрибуте onclick(для элемента списка в шапке) -->
+                <li onclick="alert('Мы открыты 24/7! Ждем вас в гости.')" style="cursor: pointer;">Работаем круглосуточно!</li>
+                <li>8 977 320 88 88</li>
+            </ul>
+            <a href="#booking" class="btn-booking">Забронировать!</a>
+        </div>
+    </header>
+
+    <!-- 2. СЕКЦИЯ ЗОНЫ -->
+    <section id="zones" class="zones-section">
+        <div class="zones-wrapper">
+            <h2 class="zones-title">РАЗНЫЕ ЗОНЫ С РАЗНЫМИ УСЛОВИЯМИ</h2>
+            
+            <div class="zones-container">
+                <div class="zone-card">
+                    <p class="zone-top-text">Игровой ПК и периферия</p>
+                    <h3>СТАНДАРТ</h3>
+                    <div class="zone-img-box pink-border">
+                        <img src="media/зона1.png" alt="Зона Стандарт">
+                    </div>
+                    <p class="zone-desc">Общая Зона</p>
+                    <a href="#" class="zone-link pink-text">Подробнее →</a>
+                </div>
+
+                <div class="zone-card">
+                    <p class="zone-top-text">Монитор больше + ПК мощнее</p>
+                    <h3>СТАНДАРТ+</h3>
+                    <div class="zone-img-box cyan-border">
+                        <img src="media/зона2.png" alt="Зона Стандарт Плюс">
+                    </div>
+                    <p class="zone-desc">Лучшие Места</p>
+                    <a href="#" class="zone-link cyan-text">Подробнее →</a>
+                </div>
+
+                <div class="zone-card">
+                    <p class="zone-top-text">Подписка PS+ и 2 геймпада</p>
+                    <h3>ПРИСТАВКА</h3>
+                    <div class="zone-img-box blue-border">
+                        <img src="media/зона3.png" alt="Зона Приставка">
+                    </div>
+                    <p class="zone-desc">Диван + PS5</p>
+                    <a href="#" class="zone-link blue-text">Подробнее →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ ГАЛЕРЕЯ -->
+    <section id="photo" class="gallery-section">
+        <h2 class="section-heading">НАША ГАЛЕРЕЯ</h2>
+        <div class="gallery-container">
+            <input type="radio" name="rooms" id="room1" checked>
+            <input type="radio" name="rooms" id="room2">
+            <input type="radio" name="rooms" id="room3">
+
+            <div class="carousel-viewport">
+                <div class="arrows-container">
+                    <label for="room3" class="arrow left-arrow" id="arrow-left-1">←</label>
+                    <label for="room1" class="arrow left-arrow" id="arrow-left-2">←</label>
+                    <label for="room2" class="arrow left-arrow" id="arrow-left-3">←</label>
+                    <label for="room2" class="arrow right-arrow" id="arrow-right-1">→</label>
+                    <label for="room3" class="arrow right-arrow" id="arrow-right-2">→</label>
+                    <label for="room1" class="arrow right-arrow" id="arrow-right-3">→</label>
+                </div>
+                
+                <div class="carousel-slides">
+                    <div class="slide s1"><img src="media/комната1.png" alt="Комната 1"></div>
+                    <div class="slide s2"><img src="media/комната2.png" alt="Комната 2"></div>
+                    <div class="slide s3"><img src="media/комната3.png" alt="Комната 3"></div>
+                </div>
+            </div>
+
+            <div class="pagination-dots">
+                <label for="room1" class="dot d1"></label>
+                <label for="room2" class="dot d2"></label>
+                <label for="room3" class="dot d3"></label>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ БРОНИРОВАНИЯ -->
+    <section id="booking" class="booking-section">
+        <div class="booking-card animate-fade-in">
+            <svg class="booking-arrow" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="path-line" d="M180 20 H400 C430 20 430 40 430 70 V150 M430 220 V250 C430 280 400 280 370 280 H150" 
+                      stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+                <path d="M425 145 L430 152 L435 145" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+                <path d="M155 275 L148 280 L155 285" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+            </svg>
+
+            <div class="booking-content">
+                <h2 class="booking-title">Забронируй место!</h2>
+                
+                <form class="booking-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Имя" class="input-field name-input" required>
+                        <input type="date" class="input-field date-input" required>
+                        <input type="time" class="input-field time-input" required>
+                    </div>
+
+                    <div class="form-row select-wrapper">
+                        <label>Количество гостей</label>
+                        <select class="input-field guest-select">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+
+                    <input type="tel" id="phone" class="input-field full-input" placeholder="+375 (__) ___-__-__">
+                    <textarea placeholder="Ваши пожелания" class="input-field textarea-field"></textarea>
+
+                    <button type="submit" class="btn-submit">Забронировать!</button>
+                </form>
+            </div>
+
+            <div class="form-image floating">
+                <img src="media/форма.png" alt="Экипировка">
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ АКЦИЙ -->
+    <section id="promo" class="promo-section">
+        <div class="promo-container">
+            <h2 class="promo-title">АКЦИИ И СКИДКИ НА ЛЮБОЙ ВКУС</h2>
+            
+            <div class="promo-grid">
+                <div class="promo-card card-wide">
+                    <div class="promo-content">
+                        <p>ПРОМОКОД CYBER</p>
+                        <!-- Способ внедрения 4: Псевдопротокол javascript:(Внедрен в ссылку первой карточки акций:) -->
+                        <a href="javascript:activatePromoCode();" class="promo-link">Активировать →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card card-tall">
+                    <div class="promo-content">
+                        <p>СКИДКИ ПН-СРЕДА</p>
+                        <a href="#booking" class="promo-link">Забронировать →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card">
+                    <div class="promo-content">
+                        <p>СНЕКИ И НАПИТКИ</p>
+                        <a href="#" class="promo-link">Подробнее →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card card-medium">
+                    <div class="promo-content">
+                        <p>КИБЕРФИКАЦИЯ CS</p>
+                        <a href="#" class="promo-link">Хочу участвовать →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card">
+                    <div class="promo-content">
+                        <p>ДР</p>
+                        <a href="#booking" class="promo-link">Забронировать →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card card-medium">
+                    <div class="promo-content">
+                        <p>КИБЕРФИКАЦИЯ DOTA</p>
+                        <a href="#" class="promo-link">Хочу участвовать →</a>
+                    </div>
+                </div>
+
+                <div class="promo-card card-tall">
+                    <div class="promo-content">
+                        <p>ГРУППА ВК</p>
+                        <a href="#" class="promo-link">Перейти в группу →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- СЕКЦИЯ КОНТАКТЫ -->
+    <footer id="contacts" class="footer-section">
+        <div class="footer-container">
+            <div class="contact-card">
+                <h2 class="contact-title">Как нас найти?</h2>
+                
+                <div class="metro-info">
+                    <p><span class="dot orange"></span> Метро Профсоюзная — 4 минуты пешком</p>
+                    <p><span class="dot orange"></span> Метро Академическая — 5 минут пешком</p>
+                </div>
+
+                <div class="address-info">
+                    <p><strong>Адрес:</strong> Профсоюзная улица 22/10 к1</p>
+                    <p class="phone-row">
+                        <strong>Телефон:</strong> +7 977 320 88 88
+                        <a href="https://t.me/username"><img src="media/Telegram.svg" alt="TG" class="social-icon-small"></a>
+                        <a href="https://wa.me/79773208888"><img src="media/Whatsapp.svg" alt="WA" class="social-icon-small"></a>
+                    </p>
+                </div>
+
+                <div class="collab-info">
+                    <p><strong>По вопросам сотрудничества</strong></p>
+                    <p>Коммерческие предложения можно направить в группу ВК или в Телеграм</p>
+                </div>
+
+                <div class="footer-bottom">
+                    <a href="#booking" class="btn-booking-small">Забронировать!</a>
+                    <a href="#"><img src="media/Vk.svg" alt="VK" class="vk-logo-big"></a>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=37.641604%2C55.750523&z=16" 
+                            style="width: 100%; height: 100%; border: 0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- IMask Library -->
+    <script src="https://unpkg.com/imask"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const phoneInput = document.getElementById('phone');
+            if (phoneInput && typeof IMask !== 'undefined') {
+                IMask(phoneInput, {
+                    mask: '+375 (00) 000-00-00',
+                    lazy: false
+                });
+            }
+        });
+    </script>
+
+    <!-- Способ внедрения 2: Внутренний скрипт в блоке <script> -->
+    <script>
+        function welcomeEasterEgg() {
+            const slogans = [
+                "Добро пожаловать в КИБЕРТЕКУ!",
+                "Твой максимальный FPS уже ждет тебя!",
+                "Лучшее железо на Профсоюзной!",
+                "Заряжайся энергией победы!"
+            ];
+            
+            let message = "";
+            
+            // Использование циклов и управляющих инструкций (for, break)
+            for (let i = 0; i < slogans.length; i++) {
+                // Выбираем случайный слоган
+                if (Math.random() > 0.5) {
+                    message = slogans[i];
+                    break; // Прерывание цикла при нахождении элемента
+                }
+            }
+            
+            // Если случайным образом ничего не выбралось, берем первый элемент
+            if (!message) {
+                message = slogans[0];
+            }
+            
+            // Диалоговое окно alert
+            alert(message);
+            return; // Инструкция возврата
+        }
+    </script>
+
+    <!-- Способ внедрения 3: Подключение внешнего скрипта -->
+    <script src="script.js"></script>
+</body>
+</html>

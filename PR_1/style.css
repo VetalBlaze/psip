@@ -1,0 +1,1270 @@
+/* Обнуление базовых отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    color: #1e1e1e;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Оболочка первого экрана с фоновым рисунком background.png */
+.hero-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 80px 40px 80px;
+    background-image: url('media/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* --- СТИЛИ ШАПКИ (HEADER) --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 60px auto;
+}
+
+/* Логотип */
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.logo-subtitle {
+    font-size: 11px;
+    color: #555555;
+    margin-top: 2px;
+}
+
+/* Навигационное меню */
+.nav-menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+}
+
+/* Активная синяя вкладка "Главная" */
+.nav-link.active {
+    background-color: #2b3eff;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+/* Кнопка "Войти" */
+.btn-login {
+    background-color: #2b3eff;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(43, 62, 255, 0.2);
+    transition: background 0.2s ease;
+}
+
+.btn-login:hover, .nav-link.active:hover {
+    background-color: #1a2cd4;
+}
+
+
+/* --- СТИЛИ ГЛАВНОГО БАННЕРА (HERO) --- */
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+/* Левый текстовый блок */
+.hero-text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1e1e24;
+    margin-bottom: 25px;
+}
+
+.orange-text {
+    color: #ff6b35; /* Оранжевый цвет выделений */
+}
+
+.hero-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 40px;
+}
+
+/* Форма поиска */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 500px;
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border-bottom: 1px solid #cccccc;
+    padding: 10px 5px;
+}
+
+.search-icon {
+    font-size: 16px;
+    color: #888888;
+    margin-right: 10px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    background: transparent;
+}
+
+.search-input::placeholder {
+    color: #aaaaaa;
+}
+
+/* Кнопка "Найти" */
+.btn-search {
+    background-color: #2b3eff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(43, 62, 255, 0.2);
+    transition: background 0.2s ease;
+}
+
+.btn-search:hover {
+    background-color: #1a2cd4;
+}
+
+/* Правый графический блок */
+.hero-image-block {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+/* Слой 1: Бежевый круг на заднем плане */
+.img-circle {
+    position: absolute;
+    right: 0;
+    top: 5%;
+    width: 85%;
+    max-width: 500px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Слой 2: Персонажи на переднем плане */
+.img-people {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    max-width: 600px;
+    object-fit: contain;
+}
+/* --- СТИЛИ БЛОКА ПРЕИМУЩЕСТВ --- */
+.features-section {
+    width: 100%;
+    padding: 0 80px; /* Отступы по бокам, как у первого экрана */
+    margin-top: -20px; /* Небольшое смещение вверх, если нужно подогнать к первому экрану */
+}
+
+/* Синяя плашка-контейнер */
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #2b3eff; /* Тот же фирменный синий цвет */
+    border-radius: 12px; /* Скругление углов главного блока */
+    padding: 50px 60px; /* Внутренние отступы контента */
+}
+
+/* Сетка для каждой отдельной карточки */
+.feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1; /* Карточки будут делить пространство поровну */
+}
+
+/* Контейнер для иконки с легким полупрозрачным фоном */
+.feature-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.15); /* Полупрозрачный белый фон */
+    border-radius: 16px; /* Скругление подложки иконки */
+    flex-shrink: 0; /* Иконка не будет сжиматься при нехватке места */
+}
+
+.feature-icon {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* Текстовая часть карточки */
+.feature-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.feature-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85); /* Белый полупрозрачный текст для лучшего чтения */
+    font-weight: 400;
+}
+/* --- СТИЛИ БЛОКА АКТУАЛЬНЫХ ПРОГРАММ --- */
+.programs-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 80px auto 120px auto;
+    padding: 0 80px;
+    position: relative;
+}
+
+/* Шапка блока с заголовками и декором */
+.programs-header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.programs-main-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 12px;
+}
+
+.programs-subtitle {
+    font-size: 14px;
+    color: #555555;
+}
+
+/* Позиционирование лампочки слева */
+.decor-bulb {
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 90px;
+    height: auto;
+}
+
+/* Позиционирование закрученной стрелки справа */
+.decor-arrow {
+    position: absolute;
+    right: 20px;
+    top: -10px;
+    width: 110px;
+    height: auto;
+}
+
+/* Сетка для карточек */
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Стили самой карточки */
+.program-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); /* Мягкая тень */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Нужно для позиционирования кнопки внизу */
+    padding-bottom: 30px; /* Отступ до кнопки */
+    border: 1px solid #f3f3f3;
+}
+
+/* Область картинки карточки со скруглением */
+.card-image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    padding: 15px 15px 0 15px; /* Картинка имеет внутренние поля */
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px; /* Внутреннее скругление картинки */
+}
+
+/* Текстовое содержимое карточки */
+.card-content {
+    padding: 20px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Строка категории и звезд */
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-category {
+    font-size: 11px;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-stars {
+    color: #ff9f43; /* Оранжевый цвет звезд */
+    font-size: 12px;
+}
+
+/* Название курса */
+.card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e1e1e;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    min-height: 44px; /* Чтобы карточки были одной высоты при разной длине строк */
+}
+
+/* Цена */
+.card-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff6b35; /* Фирменный оранжевый цвет */
+    margin-bottom: 15px;
+}
+
+/* Тонкая серая линия-разделитель */
+.card-divider {
+    height: 1px;
+    background-color: #eeeeee;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Характеристики внизу карточки */
+.card-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-item {
+    font-size: 11px;
+    color: #888888;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Оранжевая кнопка «Записаться» */
+.btn-enroll {
+    position: absolute;
+    bottom: -22px; /* Выносим кнопку наполовину за пределы карточки */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff6b35; /* Насыщенный оранжевый */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 45px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    transition: background 0.2s ease, transform 0.2s ease;
+    z-index: 3;
+}
+
+.btn-enroll:hover {
+    background-color: #e55a2b;
+    transform: translateX(-50%) scale(1.03); /* Небольшой эффект при наведении */
+}
+/* --- СТИЛИ БЛОКА БЫСТРОГО ДОСТУПА --- */
+.quick-access-section {
+    width: 100%;
+    background-color: #fdf8ed; /* Нежный бежевый фон всей секции */
+    padding: 60px 80px;
+    margin-top: 40px;
+}
+
+.quick-access-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Ровно пополам: графика и текст */
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 60px;
+}
+
+/* Левый блок с изображениями */
+.quick-access-media {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+}
+
+/* Наложенный сзади фон backgroind1.png */
+.quick-bg-icons {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+/* Картинка женщины на переднем плане */
+.quick-img-woman {
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    z-index: 2;
+    object-fit: contain;
+}
+
+/* Правый текстовый блок */
+.quick-access-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Главный заголовок секции */
+.quick-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 35px;
+}
+
+.quick-title-orange {
+    color: #ff6b35; /* Оранжевое выделение слова "доступ" */
+}
+
+/* Список элементов */
+.quick-list {
+    list-style: none; /* Убираем стандартные маркеры */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Расстояние между пунктами */
+}
+
+.quick-item {
+    display: flex;
+    align-items: center; /* Центрируем маркер по вертикали относительно строки */
+    gap: 20px;
+}
+
+/* Синие скругленные маркеры квадратной формы */
+.quick-marker {
+    width: 36px;
+    height: 36px;
+    background-color: #2b3eff; /* Фирменный синий цвет */
+    border-radius: 12px; /* Мягкое скругление углов маркера */
+    flex-shrink: 0; /* Чтобы маркер не деформировался */
+}
+
+/* Контейнер для текстов внутри пункта */
+.quick-item-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.quick-item-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e1e1e;
+}
+
+.quick-item-desc {
+    font-size: 13px;
+    color: #777777;
+    font-weight: 400;
+}
+/* --- СТИЛИ БЛОКА ОТЗЫВОВ --- */
+.reviews-section {
+    width: 100%;
+    position: relative; /* Необходимо для позиционирования стрелки и планеты */
+    padding: 80px 80px 100px 80px;
+    background: radial-gradient(circle at center, #ffffff 0%, #fff7f2 100%); /* Мягкий бежево-розовый градиент по краям */
+    overflow: hidden;
+}
+
+/* Центрирование заголовков */
+.reviews-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.reviews-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 12px;
+}
+
+.reviews-subtitle {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Контейнер для сетки карточек */
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto 50px auto;
+}
+
+/* Белые карточки отзывов */
+.review-card {
+    background: #ffffff;
+    border-radius: 4px; /* У карточек минимальное скругление, почти острые углы */
+    padding: 40px 35px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.03); /* Очень легкая, размытая тень */
+    min-height: 250px;
+}
+
+/* Текст отзыва */
+.review-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #999999; /* Серый цвет текста */
+    font-style: normal;
+    margin-bottom: 30px;
+}
+
+/* Блок автора внутри карточки */
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Аватарка автора */
+.user-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Идеальный круг */
+    object-fit: cover;
+}
+
+/* Информация об авторе */
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.user-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e1e1e;
+}
+
+.user-role {
+    font-size: 11px;
+    color: #aaaaaa;
+}
+
+/* --- ПАГИНАЦИЯ (ТОЧКИ СЛАЙДЕРА) --- */
+.reviews-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #cccccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Активная длинная фиолетово-синяя точка */
+.dot.active {
+    width: 24px;
+    background-color: #4a3aff; /* Темно-синий/фиолетовый оттенок с макета */
+    border-radius: 4px;
+}
+
+/* --- ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ (ПОЗИЦИОНИРОВАНИЕ) --- */
+/* Фиолетовая стрелочка слева внизу */
+.decor-review-arrow {
+    position: absolute;
+    left: 70px;
+    bottom: 80px;
+    width: 75px;
+    height: auto;
+    z-index: 2;
+}
+
+/* Планета справа внизу */
+.decor-review-planet {
+    position: absolute;
+    right: 60px;
+    bottom: 40px;
+    width: 65px;
+    height: auto;
+    z-index: 2;
+}
+/* --- СТИЛИ БЛОКА НАША КОМАНДА --- */
+.team-section {
+    width: 100%;
+    padding: 80px 80px 120px 80px;
+    background: radial-gradient(circle at center, #ffffff 0%, #fffbf7 100%); /* Плавное свечение по углам, как на макете */
+}
+
+/* Шапка блока */
+.team-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.team-title {
+    font-size: 36px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.team-subtitle {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* Сетка контейнера */
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Сама карточка команды */
+.team-card {
+    background: #ffffff;
+    border-radius: 16px; /* Заметное скругление всей карточки */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.05); /* Объемная легкая тень */
+    flex: 1;
+    overflow: hidden; /* Чтобы картинка не вылезала за скругленные углы сверху */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f8f8f8;
+}
+
+/* Оболочка для изображения внутри карточки */
+.team-image-wrapper {
+    width: 100%;
+    height: 240px; /* Фиксированная высота для ровных фоток */
+    overflow: hidden;
+    padding: 12px 12px 0 12px; /* Небольшие внутренние поля для создания рамки вокруг фото */
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px; /* Скругление только фотографии */
+}
+
+/* Текстовая начинка */
+.team-content {
+    padding: 25px 25px 20px 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Имя сотрудника */
+.member-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 6px;
+}
+
+/* Профессия и никнейм/колледж */
+.member-meta {
+    font-size: 12px;
+    color: #999999;
+    margin-bottom: 20px;
+}
+
+.member-handle {
+    color: #bbbbbb;
+    margin-left: 2px;
+}
+
+/* Описание */
+.member-bio {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #b0b0b0; /* Светло-серый мелкий шрифт */
+    margin-bottom: 30px;
+    flex-grow: 1; /* Распределяет пустоту, выравнивая подвал по низу */
+}
+
+/* Подвал карточки с ролью и соцсетями */
+.team-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Прижимает блок к самому низу контента */
+}
+
+/* Название позиции (оранжевый/светло-оранжевый оттенок) */
+.member-role {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ff8552; /* Цвет текста первой роли */
+}
+
+.member-role.orange-role {
+    color: #ff9f76; /* Чуть более светлый оттенок для физики */
+}
+
+/* Блок ссылок на соцсети */
+.social-links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.social-icon {
+    display: inline-flex;
+    transition: transform 0.2s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px); /* Эффект подпрыгивания иконки при наведении */
+}
+
+.social-icon img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+/* --- СТИЛИ БЛОКА ПОДПИСКИ НА РАССЫЛКУ --- */
+.newsletter-section {
+    width: 100%;
+    padding: 60px 80px 80px 80px; /* Боковые отступы выровнены с остальным сайтом */
+    background-color: #ffffff;
+}
+
+/* Синий баннер-контейнер */
+.newsletter-container {
+    position: relative; /* База для абсолютного позиционирования иконок */
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-image: url('media/backgroind2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px; /* Мягкое скругление углов главного баннера */
+    padding: 60px 20px; /* Внутренние отступы сверху и снизу */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Скрывает лишние части декора за пределами скругления */
+}
+
+/* Оболочка для центрирования текста и формы */
+.newsletter-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3; /* Поверх фонового изображения */
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Главный заголовок */
+.newsletter-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Подзаголовок */
+.newsletter-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85); /* Белый полупрозрачный текст */
+    margin-bottom: 35px;
+}
+
+/* Контейнер единой формы (инпут + кнопка) */
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 30px; /* Закругленная овальная форма капсулы */
+    padding: 6px 6px 6px 25px; /* Внутренний отступ слева для текста */
+    width: 100%;
+    max-width: 480px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Поле ввода Email */
+.newsletter-input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: #1e1e1e;
+    flex-grow: 1;
+    background: transparent;
+}
+
+.newsletter-input::placeholder {
+    color: #bbbbbb; /* Нежный серый цвет плейсхолдера */
+}
+
+/* Оранжевая кнопка «Отправить» */
+.btn-subscribe {
+    background-color: #ff6b35; /* Яркий оранжевый цвет */
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 14px 40px;
+    border-radius: 25px; /* Закругление углов кнопки внутри капсулы */
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-subscribe:hover {
+    background-color: #e55a2b; /* Затемнение при наведении */
+}
+
+.btn-subscribe:active {
+    transform: scale(0.98); /* Легкий клик-эффект */
+}
+
+/* --- ПОЗИЦИОНИРОВАНИЕ ДЕКОРАТИВНЫХ ЭЛЕМЕНТОВ --- */
+/* Оранжевая стрелка в левом нижнем углу */
+.decor-news-arrow {
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+    width: 90px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Лампочка в правом нижнем углу */
+.decor-news-bulb {
+    position: absolute;
+    right: 15%;
+    bottom: 15%;
+    width: 70px;
+    height: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+/* --- СТИЛИ ПОДВАЛА САЙТА --- */
+.footer-section {
+    width: 100%;
+    background-color: #fdf8f2; /* Светло-кремовый фон, как на макете */
+    padding: 80px 80px 30px 80px;
+    margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Общие стили для всех колонок */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Первая широкая колонка с описанием */
+.footer-brand {
+    max-width: 320px;
+}
+
+.footer-logo {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0d1321; /* Очень темно-синий/черный цвет */
+    margin-bottom: 25px;
+}
+
+.brand-text {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #7a7a7a; /* Серый цвет для второстепенного текста */
+}
+
+/* Заголовки маленьких колонок */
+.footer-heading {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0d1321;
+    margin-bottom: 25px;
+}
+
+/* Списки ссылок */
+.footer-links, .contacts-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Расстояние между строками */
+}
+
+.footer-links a, .contacts-list a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #7a7a7a;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover, .contacts-list a:hover {
+    color: #2b3eff; /* Эффект наведения фирменным синим цветом */
+}
+
+/* Текст адреса, который не является ссылкой */
+.address-text {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #7a7a7a;
+}
+
+/* Блок иконок социальных сетей */
+.footer-socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px; /* Отступ сверху от текстовых контактов */
+}
+
+.footer-social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.footer-social-icon:hover {
+    transform: translateY(-3px); /* Легкое всплытие иконки при наведении */
+}
+
+.footer-social-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* --- НИЖНЯЯ ЧАСТЬ С КОПИРАЙТОМ --- */
+.footer-bottom {
+    width: 100%;
+    max-width: 1400px;
+    margin: 50px auto 0 auto;
+    text-align: center;
+}
+
+/* Тонкая серая линия во всю ширину */
+.footer-divider {
+    height: 1px;
+    background-color: #ebdcd0; /* Мягкий бежево-серый цвет разделителя */
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+/* Текст копирайта */
+.copyright-text {
+    font-size: 12px;
+    color: #999999;
+}
+/* --- СТИЛИ СИСТЕМНЫХ УВЕДОМЛЕНИЙ (ОШИБКИ И УСПЕХ) --- */
+.system-alert {
+    padding: 15px 30px;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.system-alert ul {
+    list-style: none;
+}
+
+.alert-error {
+    background-color: #ffeef0;
+    color: #e53935;
+    border-bottom: 2px solid #e53935;
+}
+
+.alert-success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-bottom: 2px solid #2e7d32;
+}
+
+
+/* --- СТИЛИ ОТОБРАЖЕНИЯ АВТОРИЗОВАННОГО ПОЛЬЗОВАТЕЛЯ --- */
+.user-logged-in {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.user-logged-in strong {
+    color: #2b3eff;
+}
+
+.btn-logout {
+    background-color: #ff6b35;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-logout:hover {
+    background-color: #e55a2b;
+}
+
+
+/* --- СТИЛИ МОДАЛЬНЫХ ОКОН --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Класс active делает модальное окно видимым */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-box {
+    transform: translateY(0);
+}
+
+/* Кнопка закрытия окна (крестик) */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #aaaaaa;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #ff6b35;
+}
+
+.modal-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #555555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+    border-color: #2b3eff; /* Фирменный синий фокус */
+}
+
+/* Кнопка отправки формы */
+.btn-modal-submit {
+    background-color: #2b3eff;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-modal-submit:hover {
+    background-color: #1a2cd4;
+}
+
+/* Текст переключения внизу формы */
+.modal-switch {
+    text-align: center;
+    font-size: 13px;
+    color: #777777;
+    margin-top: 20px;
+}
+
+.modal-switch a {
+    color: #ff6b35; /* Оранжевая ссылка */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.modal-switch a:hover {
+    text-decoration: underline;
+}

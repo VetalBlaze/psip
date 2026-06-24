@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 5</title>
+</head>
+<body>
+    <script>
+        let s1 = "Я люблю Беларусь";
+        let s2 = "Я стану лучшим программистом Беларуси.";
+
+        // 1. Длина строки s1
+        let lenS1 = s1.length;
+
+        // 2. Встречается ли слово "лучшим" в строке s2
+        let hasWord = s2.includes("лучшим");
+
+        // 3. Выделить 7-й символ (n = 7). 
+        // В программировании индексы идут с 0, поэтому 7-й по счету символ имеет индекс 6.
+        let n = 7;
+        let nthChar = s2.charAt(n - 1); 
+
+        // 4. Определить ASCII / Unicode код этого символа
+        let charCode = nthChar.charCodeAt(0);
+
+        document.write("1. Длина строки s1: <b>" + lenS1 + "</b><br>");
+        document.write("2. Слово 'лучшим' в s2: <b>" + (hasWord ? "Встречается" : "Не встречается") + "</b><br>");
+        document.write("3. 7-й символ в строке s2: <b>'" + nthChar + "'</b><br>");
+        document.write("4. Код символа '" + nthChar + "': <b>" + charCode + "</b><br>");
+    </script>
+</body>
+</html>

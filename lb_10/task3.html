@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+</head>
+<body>
+    <script>
+        let arr = [4, 9, 12, 7, 15, 2, 18, 21, 5, 30]; // 10 целых чисел
+        let count = 0;
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 3 === 0) {
+                count++;
+            }
+        }
+
+        document.write("<p>Массив: " + arr.join(", ") + "</p>");
+        document.write("<p>Количество элементов, кратных числу 3: <b>" + count + "</b></p>");
+    </script>
+</body>
+</html>

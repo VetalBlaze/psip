@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Фиксированный макет в пикселях</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="layout">
+    <!-- Блок 1 -->
+    <div class="header bg-1-2"><b>1</b></div>
+    
+    <!-- Верхняя часть -->
+    <div class="section">
+        <!-- Блок 3 с формой заказа -->
+        <div class="left-block bg-3 order-block">
+            <div class="form-container">
+                <h2>Форма заказа</h2>
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    
+                    <div class="form-group">
+                        <label>Название организации</label>
+                        <input type="text" name="org_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>ОГРН/ИНН</label>
+                        <input type="text" name="ogrn_inn">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Диаметр печати/размер штампа<span class="required">*</span></label>
+                        <input type="text" name="size" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Тип оснастки<span class="required">*</span></label>
+                        <select name="type" required>
+                            <option value="manual">Ручная</option>
+                            <option value="automatic">Автоматическая</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Количество</label>
+                        <input type="text" name="quantity">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Срок изготовления<span class="required">*</span></label>
+                        <select name="term" required>
+                            <option value="urgent">Срочно</option>
+                            <option value="normal">Обычный</option>
+                        </select>
+                    </div>
+
+                   <div class="form-group file-group">
+    <label>Загрузка файла</label>
+    <p class="file-hint">Файл графического формата и формата MS Word, не более 10Мб</p>
+    <div class="file-input-wrapper">
+        <input type="text" id="file-name-display" readonly>
+        <label class="file-button">
+            Обзор...
+            <input type="file" name="file" onchange="if(this.files.length) document.getElementById('file-name-display').value = this.files[0].name">
+        </label>
+    </div>
+</div>
+
+
+                    <div class="form-group">
+                        <label>Контактное лицо</label>
+                        <input type="text" name="contact_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Контактный телефон<span class="required">*</span></label>
+                        <input type="tel" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Контактный e-mail<span class="required">*</span></label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ваши комментарии</label>
+                        <textarea name="comments" rows="6"></textarea>
+                    </div>
+
+                    <p class="required-hint"><span class="required">*</span> Поля обязательные для заполнения</p>
+
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Правая часть -->
+        <div class="right-block">
+            <div class="top-row">
+                <div class="block-5 bg-5"><b>5</b></div>
+                <div class="block-6 bg-6"><b>6</b></div>
+            </div>
+            <!-- Нижний ряд с карточкой товара -->
+<div class="bottom-row bg-7 product-row">
+    <div class="product-card">
+        
+        <!-- Левая колонка: изображение товара -->
+        <div class="product-image-container">
+            <img src="media/dress.png" alt="Платье VERSACE" class="product-image">
+        </div>
+
+        <!-- Правая колонка: информация и выбор параметров -->
+        <div class="product-info-container">
+            
+            <!-- Заголовок и рейтинг -->
+            <div class="product-header-line">
+                <h1 class="product-title">ПЛАТЬЕ VERSACE</h1>
+                <div class="product-rating">
+                    <span class="star active">★</span>
+                    <span class="star active">★</span>
+                    <span class="star active">★</span>
+                    <span class="star active">★</span>
+                </div>
+            </div>
+
+            <!-- Описание -->
+            <p class="product-description">
+                Современное платье Версаче разработано для элегантных и уверенных в себе дам. 
+                Вечерние наряды от этого бренда выбирают стильные и утонченные девушки.
+            </p>
+
+            <!-- Блок выбора размеров -->
+            <div class="product-options-row">
+                <div class="size-selector-group">
+                    <span class="option-label">Размер</span>
+                    <button type="button" class="size-btn active">42</button>
+                </div>
+                <div class="size-selector-group">
+                    <span class="option-label">Размер</span>
+                    <button type="button" class="size-btn active">S</button>
+                    <button type="button" class="size-btn">M</button>
+                    <button type="button" class="size-btn">L</button>
+                    <button type="button" class="size-btn">XL</button>
+                </div>
+            </div>
+
+            <!-- Количество -->
+            <div class="quantity-selector">
+                <span class="option-label">Кол-во</span>
+                <div class="quantity-controls">
+                    <button type="button" class="qty-btn" onclick="let input = this.nextElementSibling; if(parseInt(input.value) > 1) input.value = parseInt(input.value) - 1;">-</button>
+                    <input type="text" value="1" readonly class="qty-input">
+                    <button type="button" class="qty-btn" onclick="let input = this.previousElementSibling; input.value = parseInt(input.value) + 1;">+</button>
+                </div>
+            </div>
+
+            <!-- Цена -->
+            <div class="product-price">42 900 руб.</div>
+
+            <!-- Кнопки действий -->
+            <div class="product-actions">
+                <button type="button" class="add-to-cart-btn">В КОРЗИНУ</button>
+                <button type="button" class="action-icon-btn">
+                    <svg viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="#777" stroke-width="2" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                </button>
+                <button type="button" class="action-icon-btn">
+                    <svg viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="#777" stroke-width="2" d="M19 8l-7 5-7-5V6l7 5 7-5m0-2H5c-1.11 0-2 .89-2 2v12c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.11-.9-2-2-2z"/></svg>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <!-- Нижняя часть -->
+    <div class="section">
+        <!-- Блок 4 -->
+        <div class="left-block bg-4"><b>4</b></div>
+        <!-- Правая часть -->
+        <div class="right-block">
+            <div class="top-row">
+                <div class="block-8 bg-8"><b>8</b></div>
+                <div class="block-9 bg-9"><b>9</b></div>
+            </div>
+            <div class="bottom-row bg-10">
+                <b>10</b>
+            </div>
+        </div>
+    </div>
+
+    <!-- Блок 2 -->
+    <div class="footer bg-1-2"><b>2</b></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твоё образование</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем шрифт, похожий на макет -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Главный контейнер с фоном фоновых иконок -->
+    <div class="hero-wrapper">
+        
+        <!-- Шапка сайта (Header) -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-title">Твоё образование</div>
+                <div class="logo-subtitle">Дополнительное образование и курсы обучения онлайн</div>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active">Главная</a>
+                <a href="#" class="nav-link">Курсы</a>
+                <a href="#" class="nav-link">Генераторы</a>
+                <a href="#" class="nav-link">Учителю</a>
+                <a href="#" class="nav-link">Ученику</a>
+                <a href="#" class="nav-link">Руководства</a>
+                <a href="#" class="nav-link">Новости</a>
+                <a href="#" class="nav-link">Магазин</a>
+            </nav>
+            
+            <a href="#" class="btn-login">Войти</a>
+        </header>
+
+        <!-- Основной баннер (Hero Section) -->
+        <main class="hero-content">
+            <!-- Левая часть: Текст и поиск -->
+            <div class="hero-text-block">
+                <h1 class="hero-title">
+                    Обучающие <span class="orange-text">курсы</span><br>
+                    Генераторы <span class="orange-text">задач</span>
+                </h1>
+                <p class="hero-description">
+                    И многое другое для учителей и обучающихся.<br>
+                    Проект старается сделать онлайн образовательное более доступным
+                </p>
+                
+                <!-- Форма поиска -->
+                <form class="search-form">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" placeholder="Искать по сайту..." class="search-input">
+                    </div>
+                    <button type="submit" class="btn-search">Найти</button>
+                </form>
+            </div>
+
+            <!-- Правая часть: Композиция картинок -->
+            <div class="hero-image-block">
+                <img src="media/circle.png" alt="Фон" class="img-circle">
+                <img src="media/people.png" alt="Люди" class="img-people">
+            </div>
+        </main>
+
+    </div>
+    <!-- Блок преимуществ (Features Section) -->
+<section class="features-section">
+    <div class="features-container">
+        
+        <!-- Карточка 1: Курсы -->
+        <div class="feature-card">
+            <div class="feature-icon-wrapper">
+                <img src="media/courses.png" alt="Курсы" class="feature-icon">
+            </div>
+            <div class="feature-info">
+                <h3 class="feature-title">Курсы</h3>
+                <p class="feature-text">
+                    И обучающие материалы для самообразования, повышения квалификации, аттестации. База курсов постоянно расширяется
+                </p>
+            </div>
+        </div>
+
+        <!-- Карточка 2: Генераторы -->
+        <div class="feature-card">
+            <div class="feature-icon-wrapper">
+                <img src="media/generators.png" alt="Генераторы" class="feature-icon">
+            </div>
+            <div class="feature-info">
+                <h3 class="feature-title">Генераторы</h3>
+                <p class="feature-text">
+                    Задачи, на которые нет решений и дети не смогут списать их. Плюс возможность большого выбора заданий для индивидуальной работы
+                </p>
+            </div>
+        </div>
+
+        <!-- Карточка 3: Сертификат -->
+        <div class="feature-card">
+            <div class="feature-icon-wrapper">
+                <img src="media/certification.png" alt="Сертификат" class="feature-icon">
+            </div>
+            <div class="feature-info">
+                <h3 class="feature-title">Сертификат</h3>
+                <p class="feature-text">
+                    Мы работаем над получением образовательной лицензии, чтобы выдавать документы государственного образца
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Блок актуальных программ (Programs Section) -->
+<section class="programs-section">
+    
+    <!-- Заголовок блока с декоративными элементами -->
+    <div class="programs-header">
+        <img src="media/bulb.png" alt="Лампочка" class="decor-bulb">
+        <h2 class="programs-main-title">Актуальные программы</h2>
+        <p class="programs-subtitle">Популярные образовательные программы на нашей платформе.</p>
+        <img src="media/arrow.png" alt="Стрелка" class="decor-arrow">
+    </div>
+
+    <!-- Контейнер для карточек -->
+    <div class="cards-container">
+        
+        <!-- Карточка 1 -->
+        <div class="program-card">
+            <div class="card-image-wrapper">
+                <img src="media/card1.png" alt="Решение текстовых задач" class="card-img">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-category">Математика 8 класс</span>
+                    <span class="card-stars">★★★★★</span>
+                </div>
+                <h3 class="card-title">Решение текстовых задач</h3>
+                <div class="card-price">1000 РУБ</div>
+                
+                <div class="card-divider"></div>
+                
+                <div class="card-stats">
+                    <span class="stat-item">🕒 4ч 30мин</span>
+                    <span class="stat-item">💻 8 уроков</span>
+                    <span class="stat-item">👤 50 учеников</span>
+                </div>
+            </div>
+            <a href="#" class="btn-enroll">Записаться</a>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="program-card">
+            <div class="card-image-wrapper">
+                <img src="media/card2.png" alt="UI/UX дизайн для начинающих" class="card-img">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-category">UI/UX дизайн</span>
+                    <span class="card-stars">★★★★★</span>
+                </div>
+                <h3 class="card-title">UI/UX дизайн для начинающих</h3>
+                <div class="card-price">35000 РУБ</div>
+                
+                <div class="card-divider"></div>
+                
+                <div class="card-stats">
+                    <span class="stat-item">🕒 22ч 30мин</span>
+                    <span class="stat-item">💻 34 урока</span>
+                    <span class="stat-item">👤 250 учеников</span>
+                </div>
+            </div>
+            <a href="#" class="btn-enroll">Записаться</a>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="program-card">
+            <div class="card-image-wrapper">
+                <img src="media/card3.png" alt="UI/UX дизайн для продолжающих" class="card-img">
+            </div>
+            <div class="card-content">
+                <div class="card-meta">
+                    <span class="card-category">UI/UX дизайн</span>
+                    <span class="card-stars">★★★★★</span>
+                </div>
+                <h3 class="card-title">UI/UX дизайн для продолжающих</h3>
+                <div class="card-price">65000 РУБ</div>
+                
+                <div class="card-divider"></div>
+                
+                <div class="card-stats">
+                    <span class="stat-item">🕒 22ч 30мин</span>
+                    <span class="stat-item">💻 34 урока</span>
+                    <span class="stat-item">👤 25 учеников</span>
+                </div>
+            </div>
+            <a href="#" class="btn-enroll">Записаться</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Блок быстрого доступа (Quick Access Section) -->
+<section class="quick-access-section">
+    <div class="quick-access-container">
+        
+        <!-- Левая часть: Иллюстрация и фоновые иконки -->
+        <div class="quick-access-media">
+            <img src="media/backgroind1.png" alt="Фоновые иконки" class="quick-bg-icons">
+            <img src="media/woman.png" alt="Девушка за компьютером" class="quick-img-woman">
+        </div>
+
+        <!-- Правая часть: Заголовок и список -->
+        <div class="quick-access-content">
+            <h2 class="quick-title">Быстрый <span class="quick-title-orange">доступ</span></h2>
+            
+            <ul class="quick-list">
+                <!-- Пункт 1 -->
+                <li class="quick-item">
+                    <div class="quick-marker"></div>
+                    <div class="quick-item-text">
+                        <h4 class="quick-item-title">Онлайн-курсы</h4>
+                        <p class="quick-item-desc">Обучающие, повышение квалификации, переподготовка</p>
+                    </div>
+                </li>
+                <!-- Пункт 2 -->
+                <li class="quick-item">
+                    <div class="quick-marker"></div>
+                    <div class="quick-item-text">
+                        <h4 class="quick-item-title">Генераторы</h4>
+                        <p class="quick-item-desc">Задачи для домашней работы или индивидуальных заданий</p>
+                    </div>
+                </li>
+                <!-- Пункт 3 -->
+                <li class="quick-item">
+                    <div class="quick-marker"></div>
+                    <div class="quick-item-text">
+                        <h4 class="quick-item-title">Библиотека материалов</h4>
+                        <p class="quick-item-desc">Материалы, добавленные другими преподавателями</p>
+                    </div>
+                </li>
+                <!-- Пункт 4 -->
+                <li class="quick-item">
+                    <div class="quick-marker"></div>
+                    <div class="quick-item-text">
+                        <h4 class="quick-item-title">Методические разработки</h4>
+                        <p class="quick-item-desc">От педагогов в помощь педагогам</p>
+                    </div>
+                </li>
+                <!-- Пункт 5 -->
+                <li class="quick-item">
+                    <div class="quick-marker"></div>
+                    <div class="quick-item-text">
+                        <h4 class="quick-item-title">Онлайн мероприятия</h4>
+                        <p class="quick-item-desc">За участие можно получить сертификат в ваше портфолио</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<!-- Блок отзывов (Reviews Section) -->
+<section class="reviews-section">
+    
+    <!-- Декоративные элементы по бокам -->
+    <img src="media/arrow1.png" alt="Стрелка декоративная" class="decor-review-arrow">
+    <img src="media/planet.png" alt="Планета декоративная" class="decor-review-planet">
+
+    <!-- Заголовок блока -->
+    <div class="reviews-header">
+        <h2 class="reviews-title">Что говорят о нас</h2>
+        <p class="reviews-subtitle">Учителя и ученики, которые пользуются нашей платформой</p>
+    </div>
+
+    <!-- Контейнер для трех карточек -->
+    <div class="reviews-container">
+        
+        <!-- Карточка 1 -->
+        <div class="review-card">
+            <p class="review-text">
+                "Teachings of the great explore of truth, the master-builder of human happiness, no one rejects, dislikes, or avoids pleasure itself, pleasure itself"
+            </p>
+            <div class="review-user">
+                <img src="media/Review_image1.png" alt="Finlay Kirk" class="user-avatar">
+                <div class="user-info">
+                    <h4 class="user-name">Finlay Kirk</h4>
+                    <span class="user-role">Web Developer</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="review-card">
+            <p class="review-text">
+                "Complete account of the system and expound the actual Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots"
+            </p>
+            <div class="review-user">
+                <img src="media/Review_image2.png" alt="Dannette P. Cervantes" class="user-avatar">
+                <div class="user-info">
+                    <h4 class="user-name">Dannette P. Cervantes</h4>
+                    <span class="user-role">Web Design</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="review-card">
+            <p class="review-text">
+                "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
+            </p>
+            <div class="review-user">
+                <img src="media/Review_image3.png" alt="Clara R. Altman" class="user-avatar">
+                <div class="user-info">
+                    <h4 class="user-name">Clara R. Altman</h4>
+                    <span class="user-role">UI/UX Design</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Пагинация (точки переключения слайдера) -->
+    <div class="reviews-pagination">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+</section>
+
+<!-- Блок Наша команда (Team Section) -->
+<section class="team-section">
+    
+    <!-- Заголовок блока -->
+    <div class="team-header">
+        <h2 class="team-title">Наша команда</h2>
+        <p class="team-subtitle">Те, кто стоят у истоков образовательного проекта</p>
+    </div>
+
+    <!-- Контейнер для карточек команды -->
+    <div class="team-container">
+        
+        <!-- Карточка 1: Маминов Сергей -->
+        <div class="team-card">
+            <div class="team-image-wrapper">
+                <img src="media/team1.png" alt="Маминов Сергей" class="team-img">
+            </div>
+            <div class="team-content">
+                <h3 class="member-name">Маминов Сергей</h3>
+                <div class="member-meta">Учитель математики <span class="member-handle">@maminov</span></div>
+                
+                <p class="member-bio">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.
+                </p>
+                
+                <!-- Подвал карточки -->
+                <div class="team-card-footer">
+                    <span class="member-role">Руководитель проекта</span>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><img src="media/telegram.png" alt="Telegram"></a>
+                        <a href="#" class="social-icon"><img src="media/vk.png" alt="VK"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 2: Tracy D. Wright -->
+        <div class="team-card">
+            <div class="team-image-wrapper">
+                <img src="media/team2.png" alt="Tracy D. Wright" class="team-img">
+            </div>
+            <div class="team-content">
+                <h3 class="member-name">Tracy D. Wright</h3>
+                <div class="member-meta">Professor <span class="member-handle">@George Brown College</span></div>
+                
+                <p class="member-bio">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.
+                </p>
+                
+                <!-- Подвал карточки -->
+                <div class="team-card-footer">
+                    <span class="member-role orange-role">Engineering physics</span>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><img src="media/telegram.png" alt="Telegram"></a>
+                        <a href="#" class="social-icon"><img src="media/vk.png" alt="VK"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка 3: Cynthia A. Nelson -->
+        <div class="team-card">
+            <div class="team-image-wrapper">
+                <img src="media/team3.png" alt="Cynthia A. Nelson" class="team-img">
+            </div>
+            <div class="team-content">
+                <h3 class="member-name">Cynthia A. Nelson</h3>
+                <div class="member-meta">Professor <span class="member-handle">@George Brown College</span></div>
+                
+                <p class="member-bio">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex commodo.
+                </p>
+                
+                <!-- Подвал карточки -->
+                <div class="team-card-footer">
+                    <span class="member-role orange-role">Engineering physics</span>
+                    <div class="social-links">
+                        <a href="#" class="social-icon"><img src="media/telegram.png" alt="Telegram"></a>
+                        <a href="#" class="social-icon"><img src="media/vk.png" alt="VK"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Блок подписки на рассылку (Newsletter Section) -->
+<section class="newsletter-section">
+    <div class="newsletter-container">
+        
+        <!-- Декоративные элементы внутри синего блока -->
+        <img src="media/arrow_orange.png" alt="Оранжевая стрелка" class="decor-news-arrow">
+        <img src="media/bulb.png" alt="Лампочка" class="decor-news-bulb">
+
+        <!-- Контентная часть -->
+        <div class="newsletter-content">
+            <h2 class="newsletter-title">Подпишись на нашу рассылку</h2>
+            <p class="newsletter-subtitle">Обещаем не спамить и высылать полезные материалы.</p>
+            
+            <!-- Форма подписки -->
+            <form class="newsletter-form">
+                <input type="email" placeholder="Email адрес" class="newsletter-input" required>
+                <button type="submit" class="btn-subscribe">Отправить</button>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!-- Подвал сайта (Footer Section) -->
+<footer class="footer-section">
+    <div class="footer-container">
+        
+        <!-- Колонка 1: Описание проекта -->
+        <div class="footer-column footer-brand">
+            <h3 class="footer-logo">Твоё образование</h3>
+            <p class="brand-text">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy a type specimen book.
+            </p>
+        </div>
+
+        <!-- Колонка 2: О проекте -->
+        <div class="footer-column">
+            <h4 class="footer-heading">О проекте</h4>
+            <ul class="footer-links">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Обратная связь</a></li>
+                <li><a href="#">ЧаВО?</a></li>
+            </ul>
+        </div>
+
+        <!-- Колонка 3: Курсы -->
+        <div class="footer-column">
+            <h4 class="footer-heading">Курсы</h4>
+            <ul class="footer-links">
+                <li><a href="#">Категории</a></li>
+                <li><a href="#">Как учиться</a></li>
+                <li><a href="#">Стать преподавателем</a></li>
+            </ul>
+        </div>
+
+        <!-- Колонка 4: Генераторы -->
+        <div class="footer-column">
+            <h4 class="footer-heading">Генераторы</h4>
+            <ul class="footer-links">
+                <li><a href="#">Домашки</a></li>
+                <li><a href="#">Экзамены</a></li>
+                <li><a href="#">Олимпиады</a></li>
+                <li><a href="#">Листы</a></li>
+            </ul>
+        </div>
+
+        <!-- Колонка 5: Контакты и соцсети -->
+        <div class="footer-column footer-contacts">
+            <h4 class="footer-heading">Контакты</h4>
+            <ul class="contacts-list">
+                <li><a href="tel:+79000000000">+79000000000</a></li>
+                <li><a href="mailto:kursy@tvoeobr.ru">kursy@tvoeobr.ru</a></li>
+                <li class="address-text">Российская Федерация,<br>Челябинская область,<br>г. Магнитогорск</li>
+            </ul>
+            
+            <!-- Социальные сети -->
+            <div class="footer-socials">
+                <a href="#" class="footer-social-icon"><img src="media/vk.png" alt="ВКонтакте"></a>
+                <a href="#" class="footer-social-icon"><img src="media/telegram.png" alt="Telegram"></a>
+                <a href="#" class="footer-social-icon"><img src="media/odnoklassniki.png" alt="Одноклассники"></a>
+                <a href="#" class="footer-social-icon"><img src="media/icon.png" alt="Rutube"></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Нижняя линия и копирайт -->
+    <div class="footer-bottom">
+        <div class="footer-divider"></div>
+        <p class="copyright-text">Твоё образование, Все права защищены, 2023-2024</p>
+    </div>
+</footer>
+
+</body>
+</html>

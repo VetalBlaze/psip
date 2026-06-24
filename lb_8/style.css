@@ -1,0 +1,535 @@
+/* Убираем отступы */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Главный контейнер */
+.layout {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* Общие стили */
+.layout div {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Шапка и футер */
+.header, .footer {
+    width: 100%;
+    min-height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header { border-bottom: 1px solid black; }
+.footer { border-top: 1px solid black; }
+
+/* Секции */
+.section {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+/* Левые блоки */
+.left-block {
+    width: 32.26%;
+    min-height: 600px;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Модификатор для блока №3 с формой */
+.order-block {
+    align-items: flex-start; /* Выравнивание контента по верху */
+    padding: 20px;
+}
+
+/* Правая часть */
+.right-block {
+    width: 67.74%;
+    min-height: 600px;
+}
+
+/* Верхний ряд */
+.top-row {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+/* Нижний ряд */
+.bottom-row {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Блоки */
+.block-5, .block-8 {
+    width: 47.62%;
+    min-height: 300px;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block-6, .block-9 {
+    width: 52.38%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Цвета */
+.bg-1-2 { background-color: #e0e0e0; }
+.bg-3 { background-color: #d0d0ff; }
+.bg-4 { background-color: #c0c0ff; }
+.bg-5 { background-color: #ffd0d0; }
+.bg-6 { background-color: #d0ffd0; }
+.bg-7 { background-color: #ffffd0; }
+.bg-8 { background-color: #ffc0c0; }
+.bg-9 { background-color: #c0ffc0; }
+.bg-10 { background-color: #ffffc0; }
+
+/* ========================================== */
+/* СТИЛИ ДЛЯ ФОРМЫ ЗАКАЗА    */
+/* ========================================== */
+.form-container {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: left !important; /* Сброс глобального центрирования текста */
+    font-family: "MS Sans Serif", Geneva, sans-serif, Arial;
+    color: #1a1a50;
+}
+
+.form-container h2 {
+    font-size: 26px;
+    font-weight: normal;
+    margin: 0 0 15px 0;
+    color: #13227a;
+}
+
+.form-group {
+    margin-bottom: 12px;
+    text-align: left !important;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.required {
+    color: #cc0000;
+    margin-left: 2px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #a9a9a9;
+    padding: 3px 5px;
+    font-size: 14px;
+    background-color: #ffffff;
+    border-radius: 0; /* Четкие углы как в старых веб-формах */
+}
+
+.form-group select {
+    padding: 2px 5px;
+    height: 24px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* Специфический блок загрузки файла */
+.file-group {
+    margin-bottom: 15px;
+}
+
+.file-hint {
+    font-size: 11px;
+    color: #1a1a50;
+    margin: 2px 0 5px 0;
+}
+
+.file-input-wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.file-input-wrapper input[type="text"] {
+    flex: 1;
+    height: 24px;
+}
+
+/* Обновленная кнопка "Обзор..." в точности по скриншоту */
+.file-button {
+    display: inline-block;
+    padding: 3px 18px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    cursor: pointer;
+    white-space: nowrap;
+    
+    /* Овальная форма и рамка */
+    border-radius: 12px;
+    border: 1px solid #969696;
+    
+    /* Объемный градиент и мягкая внешняя тень */
+    background: linear-gradient(to bottom, #ffffff 0%, #eaeaea 40%, #cccccc 100%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    
+    /* Внутреннее выравнивание текста */
+    text-align: center;
+    line-height: 16px;
+    height: 16px;
+}
+
+/* Эффект при наведении для живости интерфейса */
+.file-button:hover {
+    background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 40%, #dedede 100%);
+    border-color: #808080;
+}
+
+/* Скрываем дефолтный системный инпут */
+.file-button input[type="file"] {
+    display: none;
+}
+
+
+/* Сноска об обязательных полях */
+.required-hint {
+    font-size: 12px;
+    margin: 15px 0 10px 0;
+}
+
+/* Кнопка Отправить */
+.submit-btn {
+    padding: 3px 20px;
+    background: #e1e1e1;
+    border: 1px solid #707070;
+    font-size: 13px;
+    cursor: pointer;
+    color: #000;
+}
+
+.submit-btn:hover {
+    background: #d4d4d4;
+}
+
+/* ========================= */
+/* АДАПТАЦИЯ ПОД ПЛАНШЕТЫ    */
+/* ========================= */
+@media (max-width: 1024px) {
+    .section {
+        flex-direction: column;
+    }
+    .left-block {
+        width: 100%;
+        min-height: 250px;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+    .right-block {
+        width: 100%;
+    }
+    /* Позволяет блоку с формой увеличиваться на мобильных экранах */
+    .left-block.order-block {
+        min-height: auto;
+    }
+}
+
+/* ========================= */
+/* АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ    */
+/* ========================= */
+@media (max-width: 768px) {
+    .top-row {
+        flex-direction: column;
+    }
+    .block-5, .block-6, .block-8, .block-9 {
+        width: 100%;
+        min-height: 200px;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+    .bottom-row {
+        min-height: 200px;
+    }
+    .header, .footer {
+        min-height: 80px;
+    }
+}
+/* ========================================== */
+/* СТИЛИ ДЛЯ КАРТОЧКИ ТОВАРА     */
+/* ========================================== */
+
+/* Модификатор для контейнера №7 */
+
+.bottom-row.product-row {
+    align-items: stretch; /* Растягиваем внутренний контейнер на всю высоту блока 7 */
+    justify-content: center;
+    padding: 0; /* Убираем паддинги, чтобы убрать белые зазоры по краям */
+    background-color: #ffff2c; /* Принудительно возвращаем родной желтый фон блоку */
+}
+
+/* Главный контейнер карточки (исправленный) */
+.product-card {
+    display: flex;
+    width: 100%;
+    max-width: 100%; /* Позволяем карточке занять всю ширину блока 7 */
+    background: #ffffff;
+    box-sizing: border-box;
+    text-align: left !important;
+    font-family: Arial, sans-serif;
+    padding: 20px 30px; /* Переносим внутренние отступы сюда */
+}
+
+
+/* Левая часть: Картинка */
+.product-image-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.product-image {
+    max-width: 100%;
+    max-height: 280px;
+    object-fit: contain;
+}
+
+/* Правая часть: Контент */
+.product-info-container {
+    width: 70%;
+    padding: 100px 20px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Шапка карточки */
+.product-header-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.product-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #1a1a1a;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Звездный рейтинг */
+.product-rating {
+    display: flex;
+    gap: 2px;
+}
+
+.product-rating .star {
+    font-size: 16px;
+    color: #cccccc; /* Цвет пустых звезд */
+}
+
+.product-rating .star.active {
+    color: #b5b5b5; /* Серый оттенок активных звезд по макету */
+}
+
+/* Описание */
+.product-description {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #888888;
+    margin: 0 0 20px 0;
+    max-width: 580px;
+}
+
+/* Строка выбора размеров */
+.product-options-row {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.size-selector-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.option-label {
+    font-size: 12px;
+    color: #888888;
+    margin-right: 4px;
+}
+
+/* Кнопки размеров */
+.size-btn {
+    min-width: 26px;
+    height: 26px;
+    padding: 0 6px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    font-size: 12px;
+    color: #1a1a1a;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.size-btn.active {
+    border: 1px solid #000000;
+    font-weight: bold;
+}
+
+/* Переключатель количества */
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.quantity-controls {
+    display: flex;
+    border: 1px solid #e0e0e0;
+    height: 26px;
+    align-items: center;
+}
+
+.qty-btn {
+    width: 24px;
+    height: 100%;
+    background: #ffffff;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-input {
+    width: 30px;
+    height: 100%;
+    border: none;
+    border-left: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 13px;
+    color: #1a1a1a;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* Цена */
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Кнопки действий */
+.product-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.add-to-cart-btn {
+    height: 34px;
+    padding: 0 24px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    border-color: #000000;
+    background: #f9f9f9;
+}
+
+.action-icon-btn {
+    width: 34px;
+    height: 34px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.action-icon-btn:hover {
+    border-color: #999;
+}
+
+/* ========================================== */
+/* АДАПТИВНОСТЬ ДЛЯ КАРТОЧКИ                  */
+/* ========================================== */
+@media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+    }
+    .product-image-container {
+        width: 100%;
+        padding: 20px 0;
+    }
+    .product-info-container {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .product-header-line {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    .product-options-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
