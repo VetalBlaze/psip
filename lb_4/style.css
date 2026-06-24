@@ -1,0 +1,111 @@
+/* ===== ВНЕШНИЕ СТИЛИ (external CSS) ===== */
+
+body {
+    background-color: #f0f0f0;
+    font-family: Verdana, sans-serif;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #cccccc;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    margin: 15px 0;
+}
+
+nav a {
+    color: darkblue;
+    margin: 0 5px;
+}
+
+nav a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+section {
+    padding: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 5px;
+}
+
+ul {
+    background-color: #fafafa;
+    padding: 15px;
+}
+
+ol {
+    background-color: #fcfcfc;
+    padding: 15px 35px;
+}
+
+img {
+    border: 3px solid gray;
+    border-radius: 10px;
+}
+
+video {
+    border: 3px solid black;
+}
+
+audio {
+    width: 300px;
+}
+
+table {
+    width: 100%;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #dddddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+form {
+    background-color: #fafafa;
+    padding: 20px;
+    border: 1px solid #cccccc;
+}
+
+input,
+textarea {
+    margin-top: 5px;
+    padding: 5px;
+}
+
+input[type="submit"] {
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="reset"] {
+    background-color: darkred;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    font-size: 14px;
+}

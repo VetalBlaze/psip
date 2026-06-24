@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Одностраничный сайт о фильме Операция Ы и другие приключения Шурика">
+    <meta name="keywords" content="Операция Ы, Шурик, советское кино, Гайдай">
+    <meta name="author" content="Студент">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Операция Ы и другие приключения Шурика</title>
+
+    <!-- ===== СПОСОБ 1: ВНУТРЕННИЕ СТИЛИ (internal CSS) ===== -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            background-color: #dddddd;
+            padding: 15px;
+        }
+
+        h1 {
+            color: darkred;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: darkgreen;
+            font-weight: bold;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th {
+            background-color: #cccccc;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+    </style>
+
+    <!-- ===== СПОСОБ 2: ВНЕШНИЕ СТИЛИ (external CSS) ===== -->
+    
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<!-- ===== СПОСОБ 3: ВСТРОЕННЫЕ СТИЛИ (inline CSS) ===== -->
+<body style="color: #222222;">
+
+<header>
+    <h1 id="top">Фильм «Операция Ы и другие приключения Шурика»</h1>
+
+    <nav>
+        <a href="#about">О фильме</a> |
+        <a href="#actors">Актеры</a> |
+        <a href="#media">Медиа</a> |
+        <a href="#table">Таблица</a> |
+        <a href="#form">Опрос</a> |
+        <a href="https://ru.wikipedia.org/wiki/Операция_«Ы»_и_другие_приключения_Шурика" target="_blank">
+            Статья о фильме
+        </a>
+    </nav>
+
+    <hr>
+</header>
+
+<main>
+
+<section id="about">
+    <h2>О фильме</h2>
+
+    <p>
+        <strong>«Операция Ы и другие приключения Шурика»</strong> — советская комедия режиссёра 
+        <em>Леонида Гайдая</em>, вышедшая в <u>1965</u> году.
+    </p>
+
+    <p>
+        Фильм состоит из <mark>трёх новелл</mark>: 
+        «Напарник», «Наваждение», «Операция Ы».
+    </p>
+
+    <p>
+        Пример верхнего индекса: 1965<sup>год</sup><br>
+        Пример нижнего индекса: H<sub>2</sub>O<br>
+        Формула энергии: E = mc<sup>2</sup>
+    </p>
+
+    <p>
+        Спецсимволы: &copy; 1965, &reg;, &euro;, &mdash;, &laquo;Шурик&raquo;
+    </p>
+
+    <!-- ===== СПОСОБ 4: CSS ЧЕРЕЗ КЛАСС ===== -->
+    <blockquote class="quote">
+        «Надо, Федя, надо!» — известная фраза из фильма.
+    </blockquote>
+
+    <style>
+        .quote {
+            border-left: 5px solid gray;
+            padding-left: 10px;
+            font-style: italic;
+            background-color: #eeeeee;
+        }
+    </style>
+
+    <p>
+        <abbr title="Союз Советских Социалистических Республик">СССР</abbr> — страна производства фильма.
+    </p>
+
+    <details>
+        <summary>Интересный факт</summary>
+        Фильм посмотрели более 60 000 000 зрителей.
+    </details>
+
+</section>
+
+<hr>
+
+<section id="actors">
+    <h2>Главные актёры</h2>
+
+    <ul>
+        <li>Александр Демьяненко — Шурик</li>
+        <li>Юрий Никулин — Балбес</li>
+        <li>Георгий Вицин — Трус</li>
+        <li>Евгений Моргунов — Бывалый</li>
+    </ul>
+
+    <h3>Разные виды нумерованных списков</h3>
+
+    <p><strong>1. Обычная нумерация:</strong></p>
+
+    <ol>
+        <li>Напарник</li>
+        <li>Наваждение</li>
+        <li>Операция Ы</li>
+    </ol>
+
+    <p><strong>2. Буквенная нумерация (A, B, C):</strong></p>
+
+    <ol type="A">
+        <li>Комедия</li>
+        <li>Приключения</li>
+        <li>Сатира</li>
+    </ol>
+
+    <p><strong>3. Строчная буквенная (a, b, c):</strong></p>
+
+    <ol type="a">
+        <li>Юмор</li>
+        <li>Сатира</li>
+        <li>Динамика</li>
+    </ol>
+
+    <p><strong>4. Римская нумерация (I, II, III):</strong></p>
+
+    <ol type="I">
+        <li>1965 — премьера</li>
+        <li>1966 — награды</li>
+        <li>Наше время — классика</li>
+    </ol>
+
+</section>
+
+<hr>
+
+<section id="media">
+
+    <h2>Медиа-контент</h2>
+
+    <h3>Музыка из фильма</h3>
+
+    <audio controls>
+        <source src="audio/bajushki-baju-iz-kinofilma-_operacija-y-i-drugie.mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <h3>Постер фильма</h3>
+
+    <img src="media/poster.jfif"
+         alt="Постер фильма Операция Ы"
+         width="300">
+
+    <h3>Трейлер фильма</h3>
+
+    <video width="560" height="315" controls>
+        <source src="video/operaciya-y-trailer.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+
+    <h3>Популярность фильма</h3>
+
+    <p>Заполняемость залов:</p>
+    <progress value="90" max="100"></progress>
+
+    <p>Средняя оценка зрителей:</p>
+    <meter value="8" min="0" max="10"></meter>
+
+</section>
+
+<hr>
+
+<section id="table">
+
+    <h2>Структура новелл фильма</h2>
+
+    <table border="1" cellspacing="0" cellpadding="5">
+
+        <tr>
+            <th rowspan="2">Новелла</th>
+            <th colspan="2">Информация</th>
+        </tr>
+
+        <tr>
+            <th>Главный герой</th>
+            <th>Описание</th>
+        </tr>
+
+        <tr>
+            <td>Напарник</td>
+            <td>Шурик</td>
+            <td>Перевоспитание хулигана.</td>
+        </tr>
+
+        <tr>
+            <td>Наваждение</td>
+            <td>Шурик</td>
+            <td>Подготовка к экзамену.</td>
+        </tr>
+
+        <tr>
+            <td>Операция Ы</td>
+            <td>Шурик</td>
+            <td>Предотвращение ограбления склада.</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<hr>
+
+<section id="form">
+
+    <h2>Опрос о фильме</h2>
+
+    <form>
+
+        <label>
+            Ваше имя:
+            <input type="text" required>
+        </label>
+
+        <br><br>
+
+        <label>
+            Email:
+            <input type="email" required>
+        </label>
+
+        <br><br>
+
+        <p>Какая новелла вам больше нравится?</p>
+
+        <input type="radio" name="story" value="naparnik"> Напарник<br>
+        <input type="radio" name="story" value="navazhdenie"> Наваждение<br>
+        <input type="radio" name="story" value="operation"> Операция Ы<br><br>
+
+        <p>Ваши впечатления:</p>
+
+        <textarea rows="4" cols="40"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Отправить">
+        <input type="reset" value="Очистить">
+
+    </form>
+
+</section>
+
+</main>
+
+<footer>
+
+    <hr>
+
+    <p>
+        <a href="#top">Вернуться наверх</a>
+    </p>
+
+    <p>&copy; 2026 Одностраничный сайт о фильме</p>
+
+</footer>
+
+</body>
+</html>

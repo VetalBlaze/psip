@@ -1,0 +1,10 @@
+/* Селектор-класс */
+/* Оформление блока текста */
+
+.birthplace {
+    background-color: yellow; /* фон блока */
+    width: 100px;             
+    height: 100px;         
+    text-align: center;       
+    padding-top: 30px;        /* отступ сверху */
+}

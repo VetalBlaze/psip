@@ -1,0 +1,104 @@
+
+/* Убираем отступы у страницы */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Главный контейнер */
+.layout {
+    width: 1550px;
+    height: 1440px;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* Общие стили */
+.layout div {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Шапка */
+.header {
+    width: 1550px;
+    height: 120px;
+    line-height: 120px;
+    border-bottom: 1px solid black;
+}
+
+/* Футер */
+.footer {
+    width: 1550px;
+    height: 120px;
+    line-height: 120px;
+    border-top: 1px solid black;
+}
+
+/* Секция */
+.section {
+    width: 1550px;
+    height: 600px;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+/* Левый блок */
+.left-block {
+    width: 500px;
+    height: 600px;
+    line-height: 600px;
+    border-right: 1px solid black;
+}
+
+/* Правая часть */
+.right-block {
+    width: 1050px;
+    height: 600px;
+}
+
+/* Верхний ряд */
+.top-row {
+    display: flex;
+    width: 1050px;
+    height: 300px;
+    border-bottom: 1px solid black;
+}
+
+/* Нижний ряд */
+.bottom-row {
+    width: 1050px;
+    height: 300px;
+    line-height: 300px;
+}
+
+/* Блоки */
+.block-5,
+.block-8 {
+    width: 500px;
+    height: 300px;
+    line-height: 300px;
+    border-right: 1px solid black;
+}
+
+.block-6,
+.block-9 {
+    width: 550px;
+    height: 300px;
+    line-height: 300px;
+}
+
+/* Цветовая схема блоков */
+.bg-1-2 { background-color: #e0e0e0; }
+.bg-3   { background-color: #d0d0ff; }
+.bg-4   { background-color: #c0c0ff; }
+.bg-5   { background-color: #ffd0d0; }
+.bg-6   { background-color: #d0ffd0; }
+.bg-7   { background-color: #ffffd0; }
+.bg-8   { background-color: #ffc0c0; }
+.bg-9   { background-color: #c0ffc0; }
+.bg-10  { background-color: #ffffc0; }
+```

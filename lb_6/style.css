@@ -1,0 +1,124 @@
+/* Убираем отступы у страницы */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* РЕЗИНОВЫЙ контейнер */
+.layout {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* Общие стили */
+.layout div {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Шапка */
+.header {
+    width: 100%;
+    height: 8.33%; /* 120 / 1440 */
+    border-bottom: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Футер */
+.footer {
+    width: 100%;
+    height: 8.33%;
+    border-top: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Секции */
+.section {
+    width: 100%;
+    height: 41.67%; /* 600 / 1440 */
+
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+/* Левые блоки */
+.left-block {
+    width: 32.26%; /* 500 / 1550 */
+    height: 100%;
+
+    border-right: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Правая часть */
+.right-block {
+    width: 67.74%; /* 1050 / 1550 */
+    height: 100%;
+}
+
+/* Верхний ряд */
+.top-row {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+/* Нижний ряд */
+.bottom-row {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Блоки */
+.block-5,
+.block-8 {
+    width: 47.62%; /* 500 / 1050 */
+    height: 100%;
+
+    border-right: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-6,
+.block-9 {
+    width: 52.38%; /* 550 / 1050 */
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Цветовая схема блоков */
+.bg-1-2 { background-color: #e0e0e0; }
+.bg-3   { background-color: #d0d0ff; }
+.bg-4   { background-color: #c0c0ff; }
+.bg-5   { background-color: #ffd0d0; }
+.bg-6   { background-color: #d0ffd0; }
+.bg-7   { background-color: #ffffd0; }
+.bg-8   { background-color: #ffc0c0; }
+.bg-9   { background-color: #c0ffc0; }
+.bg-10  { background-color: #ffffc0; }

@@ -1,0 +1,177 @@
+/* Убираем отступы */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Главный контейнер */
+.layout {
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* Общие стили */
+.layout div {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Шапка и футер */
+.header,
+.footer {
+    width: 100%;
+    min-height: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    border-bottom: 1px solid black;
+}
+
+.footer {
+    border-top: 1px solid black;
+}
+
+/* Секции */
+.section {
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+
+    border-bottom: 1px solid black;
+}
+
+/* Левые блоки */
+.left-block {
+    width: 32.26%;
+    min-height: 600px;
+
+    border-right: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Правая часть */
+.right-block {
+    width: 67.74%;
+    min-height: 600px;
+}
+
+/* Верхний ряд */
+.top-row {
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+
+    border-bottom: 1px solid black;
+}
+
+/* Нижний ряд */
+.bottom-row {
+    width: 100%;
+    min-height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Блоки */
+.block-5,
+.block-8 {
+    width: 47.62%;
+    min-height: 300px;
+
+    border-right: 1px solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-6,
+.block-9 {
+    width: 52.38%;
+    min-height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Цвета */
+.bg-1-2 { background-color: #e0e0e0; }
+.bg-3   { background-color: #d0d0ff; }
+.bg-4   { background-color: #c0c0ff; }
+.bg-5   { background-color: #ffd0d0; }
+.bg-6   { background-color: #d0ffd0; }
+.bg-7   { background-color: #ffffd0; }
+.bg-8   { background-color: #ffc0c0; }
+.bg-9   { background-color: #c0ffc0; }
+.bg-10  { background-color: #ffffc0; }
+
+/* ========================= */
+/* АДАПТАЦИЯ ПОД ПЛАНШЕТЫ */
+/* ========================= */
+
+@media (max-width: 1024px) {
+
+    .section {
+        flex-direction: column;
+    }
+
+    .left-block {
+        width: 100%;
+        min-height: 250px;
+
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .right-block {
+        width: 100%;
+    }
+}
+
+/* ========================= */
+/* АДАПТАЦИЯ ПОД ТЕЛЕФОНЫ */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+    .top-row {
+        flex-direction: column;
+    }
+
+    .block-5,
+    .block-6,
+    .block-8,
+    .block-9 {
+        width: 100%;
+        min-height: 200px;
+
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .bottom-row {
+        min-height: 200px;
+    }
+
+    .header,
+    .footer {
+        min-height: 80px;
+    }
+}
